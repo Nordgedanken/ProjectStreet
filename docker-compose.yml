@@ -2,6 +2,7 @@ version: "2"
 
 volumes:
   mysql:
+  mysql_vmail:
   project:
   results:
   vmail:
@@ -18,11 +19,11 @@ services:
      - MYSQL_ALLOW_EMPTY_PASSWORD=yes
      
   mysql_vmail:
-    image: boinc/server_mysql
+    image: mysql
     hostname: mysql_vmail
     network_mode: bridge
     volumes:
-     - "mysql:/var/lib/mysql"
+     - "mysql_vmail:/var/lib/mysql"
     environment: 
      - MYSQL_ROOT_PASSWORD=vmail
 
