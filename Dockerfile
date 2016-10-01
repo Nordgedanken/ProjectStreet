@@ -1,4 +1,4 @@
-FROM boinc/server_makeproject
+FROM boinc/server_makeproject:latest-b2d
 
 MAINTAINER MTRNord <info@nordgedanken.de>
 
