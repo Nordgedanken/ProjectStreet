@@ -17,7 +17,7 @@ pull:
 
 makeproject: 
 	mkdir -p private
-	GITTAG="$$(git rev-parse --short HEAD),$$(TZ=UTC git show -s --format=%cd --date=local HEAD)" \
+	GITTAG="$(git rev-parse --short HEAD),$(TZ=UTC git show -s --format=%cd --date=local HEAD)" \
 	$(DC) build makeproject
 
 post-makeproject:
