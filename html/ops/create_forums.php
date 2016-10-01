@@ -64,8 +64,8 @@ create_forum($catid, 1, "General Topics", "General Discussion related to Cosmolo
 create_forum($catid, 2, "Wish list", "What features would you like to see in BOINC and Cosmology@Home");
 create_forum($catid, 3, "Technical Support", "Problems with running Cosmology@Home");
 
-$catid = create_category(2, "Cosmology@Home Science", 0);
-create_forum($catid, 4, "Cosmology and Astronomy", "Questions about the Science behind Cosmology@Home");
+$catid = create_category(2, "ProjectStreet@Car Science", 0);
+create_forum($catid, 4, "ProjectStreet@Car", "Questions about the Idea behind ProjectStreet@Car");
 
 $cvs_version_tracker[]="\$Id$";  //Generated automatically - do not edit
 ?>
