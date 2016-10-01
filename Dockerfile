@@ -3,8 +3,7 @@ FROM boinc/server_makeproject
 MAINTAINER MTRNord <info@nordgedanken.de>
 
 # project files
-COPY py $PROJHOME/py
-COPY project.xml config.xml boincserver.httpd.conf $PROJHOME/
+COPY config.xml ProjectStreet.httpd.conf $PROJHOME/
 COPY html $PROJHOME/html
 COPY bin $PROJHOME/bin
 

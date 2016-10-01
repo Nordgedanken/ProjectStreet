@@ -1,7 +1,0 @@
-appname: lsplitsims
-appver: "2.04"
-iso: "1.0.0"
-vboxwrapper:
-    x86_64-pc-linux-gnu: "26196"
-    windows_x86_64: "26197"
-    x86_64-apple-darwin: "26196"

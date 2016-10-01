@@ -19,7 +19,7 @@ define("SYS_ADMIN_EMAIL", "info@nordgedanken.de");
 define("UOTD_ADMIN_EMAIL", "info@nordgedanken.de"); # who gets user of the day pool running low e-mails?
 
 
-// Email addresses separated by pipe ( | ) that will receive user reported 
+// Email addresses separated by pipe ( | ) that will receive user reported
 // offensive forum posts.
 define("POST_REPORT_EMAILS", "info@nordgedanken.de");
 
@@ -39,7 +39,7 @@ function page_head(
         $stylesheet2 = null;
     }
 
-    
+
     if (!$caching) {
         header("Content-type: text/html; charset=utf-8");
         header ("Expires: Mon, 26 Jul 1997 05:00:00 UTC");    // Date in the past
@@ -47,7 +47,7 @@ function page_head(
         header ("Cache-Control: $cache_control_extra no-cache, must-revalidate, post-check=0, pre-check=0");  // HTTP/1.1
         header ("Pragma: no-cache");                          // HTTP/1.0
     }
-    
+
     echo "<!DOCTYPE html PUBLIC \"-//W3C//DTD HTML 4.01 Transitional//EN\" \"http://www.w3.org/TR/html4/loose.dtd\">
     ";
 
@@ -83,7 +83,7 @@ function page_head(
     </script>
 
     <script src='https://www.google.com/recaptcha/api.js'></script>
-    
+
   </head>
 
 END;
@@ -100,7 +100,7 @@ END;
       default:
         break;
     }
-    
+
 
 }
 
@@ -108,7 +108,7 @@ END;
 function project_banner($title, $prefix) {
     // Put your project title and logo here
     $url_base = url_base();
-    echo "<div id='container'>	
+    echo "<div id='container'>
    <!-- Navigation -->
    <div id='topmatter'>
     <a href='$url_base'><img src='/img/banner.jpg' border='0' height='200px' width='960px' padding='0px'/></a>
@@ -129,7 +129,7 @@ function project_banner($title, $prefix) {
             <ol>
               <li><a href='/apps.php'>Applications</a></li>
               <li><a href='/server_status.php'>Server Status</a></li>
-              <li><a href='https://github.com/marius311/cosmohome'>Development</a></li> 
+              <li><a href='https://github.com/Nordgedanken/ProjectStreet'>Development</a></li>
             </ol>
 
           <li><a href='#'>STATS</a>
@@ -148,16 +148,16 @@ function project_banner($title, $prefix) {
 }
 
 function project_footer($show_return, $show_date) {
-    echo " 
+    echo "
           <div id=\"footer\">";
-    
+
     if ($show_return) {
         echo "<a href=".URL_BASE.">Return to ".PROJECT." main page</a>\n";
     }
     echo "<br><br>Copyright &copy; ".date("Y ").COPYRIGHT_HOLDER."<br/>\n";
-    
+
 	echo <<<END
-   
+
 If you have any questions or comments regarding the content of this site, please contact <a href='http://www.cosmicmar.com'>Marius Millea</a><br/>
 This material is based upon work supported by the National Science Foundation under Grant No. AST0507676.<br/>
 Links to external sites are provided as a convenience to our users. The Department of Astronomy does not control or endorse the content of external sites.<br\>
@@ -167,14 +167,9 @@ END;
     if ($show_date) {
         echo "<font size=-2 color=bbbbbb>Generated ",time_str(time()),"</font>\n";
     }
-	echo " 
+	echo "
 	<div id='sponsors'>
-<a href='http://boinc.berkeley.edu' target='_blank'><img class='logo' src='/img/logos/boinc.png' alt='boinc'></a>
-<a href='http://www.esa.int' target='_blank'><img class='logo' src='/img/logos/esa.png' alt='esa'></a>
-<a href='http://www.jpl.nasa.gov' target='_blank'><img class='logo' src='/img/logos/jpl.png' alt='JPL'></a>
-<a href='http://www.nsf.gov' target='_blank'><img class='logo' src='/img/logos/nsf.jpg' alt='nsf'></a>
-<a href='http://www.nasa.gov' target='_blank'><img class='logo' src='img/logos/nasa.png' alt='nasa'></a>
-<a href='http://planck.caltech.edu' target='_blank'><img class='logo' src='/img/logos/planck-logo.gif' alt='planck'></a>
+<p>None at this time :)</p>
 </div></div>";
 }
 
@@ -314,7 +309,7 @@ function make_php_mailer() {
 function server_status_project_info(){
 
   list($short,$date) = explode(',',file_get_contents(project_dir()."/.gittag"));
-  echo "Server version: <a href='https://github.com/marius311/cosmohome/commits/$short'>$short</a> ($date UTC)";
+  echo "Server version: <a href='https://github.com/Nordgedanken/ProjectStreet/commits/$short'>$short</a> ($date UTC)";
 
 }
 
