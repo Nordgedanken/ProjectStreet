@@ -95,7 +95,7 @@
     </tasks>
     <daemons>
         <daemon>
-            <cmd>feeder -d 3 --allapps --priority_order_create_time</cmd>
+            <cmd>feeder -d 3</cmd>
         </daemon>
         <daemon>
             <cmd>transitioner -d 3 </cmd>
