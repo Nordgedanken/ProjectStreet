@@ -2,7 +2,7 @@ default:
 
 DC=docker-compose
 
-up: up-mysql post-makeproject up-apache
+up: up-mysql post-makeproject up-apache up-mailserver
 
 down: 
 	$(DC) down
@@ -48,7 +48,11 @@ up-mysql:
 
 rm-mysql:
 	$(DC) stop mysql && $(DC) rm -f mysql
+	
+# --- mailserver ---
 
+up-mailserver:
+	$(DC) up -d mailserver
 
 # --- backups ---
 
