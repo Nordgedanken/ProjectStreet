@@ -20,7 +20,6 @@ services:
      
   mysql_vmail:
     image: mysql
-    hostname: mysql_vmail
     network_mode: bridge
     volumes:
      - "mysql_vmail:/var/lib/mysql"
@@ -59,7 +58,7 @@ services:
     network_mode: bridge
     hostname: mail
     links:
-     - mysql
+     - mysql_vmail
     volumes: 
      - "vmail:/var/vmail"
      - "log:/var/log"
