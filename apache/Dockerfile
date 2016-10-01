@@ -1,4 +1,4 @@
-FROM boinc/server_apache
+FROM boinc/server_apache:1.3.4-b2d
 
 MAINTAINER MTRNord <info@nordgedanken.de>
 
