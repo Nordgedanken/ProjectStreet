@@ -16,6 +16,15 @@ services:
     environment: 
      - MYSQL_ROOT_PASSWORD=
      - MYSQL_ALLOW_EMPTY_PASSWORD=yes
+     
+  mysql_vmail:
+    image: boinc/server_mysql
+    hostname: mysql_vmail
+    network_mode: bridge
+    volumes:
+     - "mysql:/var/lib/mysql"
+    environment: 
+     - MYSQL_ROOT_PASSWORD=vmail
 
   makeproject:
     build: 
@@ -62,9 +71,9 @@ services:
      - "993:993"
     tty: true
     environment:
-     - DB_HOST=mysql
+     - DB_HOST=mysql_vmail
      - DB_USER=root
-     - DB_PASS=
+     - DB_PASS=vmail
      - DB_NAME=vmail
      - HOST_MAIL=info@nordgedanken.de Nordgedanken Info
      - HOST_NAME=projectstreet.dynu.com
