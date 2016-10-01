@@ -17,9 +17,7 @@ services:
 
   makeproject:
     build: 
-      context: .
-      args: 
-        GITTAG: 
+      context: . 
     network_mode: bridge
     links: 
      - mysql
