@@ -4,6 +4,8 @@ volumes:
   mysql:
   project:
   results:
+  vmail:
+  log:
 
 services:
   mysql:
@@ -41,7 +43,30 @@ services:
      - "80:80"
      - "443:443"
     tty: true
-
+    
+  mailserver:
+    image: muellermh/mailserver
+    network_mode: bridge
+    hostname: mail
+    links:
+     - mysql
+    volumes: 
+     - "vmail:/var/vmail"
+     - "log:/var/log"
+    ports: 
+     - "25:25"
+     - "587:587"
+     - "110:110"
+     - "143:143"
+     - "995:995"
+     - "993:993"
+    tty: true
+    environment:
+     DB_HOST=mysql
+     DB_USER=root
+     DB_PASS=
+     DB_NAME=vmail
+     HOST_MAIL=info@nordgedanken.de Nordgedanken Info
 
 #---------
 # backups
