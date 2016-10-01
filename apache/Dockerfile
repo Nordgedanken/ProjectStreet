@@ -1,6 +1,6 @@
-FROM boinc/server_apache:1.3.2-b2d
+FROM boinc/server_apache
 
-MAINTAINER Marius Millea <mariusmillea@gmail.com>
+MAINTAINER MTRNord <info@nordgedanken.de>
 
 # install packages 
 RUN echo "deb http://ftp.debian.org/debian jessie-backports main" >> /etc/apt/sources.list \ 
