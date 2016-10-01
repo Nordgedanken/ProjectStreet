@@ -4,7 +4,7 @@ require_once("../inc/util.inc");
 require_once("../inc/phpmailer/PHPMailerAutoload.php");
 
 $master_url = parse_config(get_config(), "<master_url>");
-define("PROJECT", "Cosmology@Home");
+define("PROJECT", "ProjectStreet@Car");
 define("URL_BASE", $master_url);
 define("SECURE_URL_BASE",str_replace("http","https",$master_url));
 define("IMAGE_PATH", "../user_profile/images/");
@@ -15,13 +15,13 @@ define("LANGUAGE_FILE", "languages.txt");
 define("STYLESHEET", "cosmohome.css");
 define("FORUM_QA_MERGED_MODE", true);
 define("COPYRIGHT_HOLDER", "Department of Astronomy at the <a href=\"http://www.illinois.edu\">University of Illinois at Urbana-Champaign</a>");
-define("SYS_ADMIN_EMAIL", "kpointer@illinois.edu");
-define("UOTD_ADMIN_EMAIL", "bwandelt@illinois.edu"); # who gets user of the day pool running low e-mails?
+define("SYS_ADMIN_EMAIL", "info@nordgedanken.de");
+define("UOTD_ADMIN_EMAIL", "info@nordgedanken.de"); # who gets user of the day pool running low e-mails?
 
 
 // Email addresses separated by pipe ( | ) that will receive user reported 
 // offensive forum posts.
-define("POST_REPORT_EMAILS", "bwandelt@illinois.edu|kpointer@illinois.edu|jrenkar@hughes.net|tutta55@boinc.be|elst93@gmail.com");
+define("POST_REPORT_EMAILS", "info@nordgedanken.de");
 
 function page_head(
     $title, $java_onload=null, $title_plain=null, $prefix="", $head_extra=null
@@ -293,12 +293,12 @@ function make_php_mailer() {
     $mail->IsSMTP();
     $mail->SMTPAuth = false;
     $mail->SMTPSecure = "";
-    $mail->Host = "darkenergy.astro.illinois.edu";
+    $mail->Host = "";
     $mail->Port = 25;
     $mail->Username = "";
     $mail->Password = "";
-    $mail->SetFrom('admin@cosmologyathome.org', 'Cosmologyathome');
-    $mail->AddReplyTo("admin@cosmologyathome.org", "Cosmologyathome");
+    $mail->SetFrom('info@nordgedanken.de', 'ProjectStreetAtCar');
+    $mail->AddReplyTo("info@nordgedanken.de", "ProjectStreetAtCar");
 
     $mail->SMTPOptions = array(
         'ssl' => array(
