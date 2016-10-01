@@ -7,7 +7,7 @@ volumes:
 
 services:
   mysql:
-    image: boinc/server_mysql:1.3.2
+    image: boinc/server_mysql
     network_mode: bridge
     volumes:
      - "mysql:/var/lib/mysql"
@@ -29,7 +29,7 @@ services:
   apache:
     build: apache
     network_mode: bridge
-    hostname: cosmohome
+    hostname: ProjectStreet
     links:
      - mysql
     volumes: 
