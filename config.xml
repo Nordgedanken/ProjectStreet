@@ -10,7 +10,7 @@
         <key_dir>/root/project/keys/</key_dir>
         <log_dir>/root/project/log_ProjectStreet</log_dir>
         <long_name>ProjectStreet@Car</long_name>
-        <master_url>http://ProjectStreet.dynu.com/ProjectStreet/</master_url>
+        <master_url>http://ProjectStreet.dynu.com/</master_url>
         <shmem_key>0x1111b0fd</shmem_key>
         <upload_dir>/root/project/upload</upload_dir>
         <upload_url>http://ProjectStreet.dynu.com/ProjectStreet_cgi/file_upload_handler</upload_url>
