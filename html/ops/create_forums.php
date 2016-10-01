@@ -57,12 +57,13 @@ function create_forum($category, $orderID, $title, $description, $is_dev_blog=0)
 db_init();
 
 $catid = create_category(0, "", 0);
+create_forum($catid, 0, "News", "News from this project");
 
 $catid = create_category(1, "General Discussion", 0);
-create_forum($catid, 0, "Announcements", "Announcements about Cosmology@Home");
-create_forum($catid, 1, "General Topics", "General Discussion related to Cosmology@Home");
-create_forum($catid, 2, "Wish list", "What features would you like to see in BOINC and Cosmology@Home");
-create_forum($catid, 3, "Technical Support", "Problems with running Cosmology@Home");
+create_forum($catid, 0, "Announcements", "Announcements about ProjectStreet@Car");
+create_forum($catid, 1, "General Topics", "General Discussion related to ProjectStreet@Car");
+create_forum($catid, 2, "Wish list", "What features would you like to see in BOINC and ProjectStreet@Car");
+create_forum($catid, 3, "Technical Support", "Problems with running ProjectStreet@Car");
 
 $catid = create_category(2, "ProjectStreet@Car Science", 0);
 create_forum($catid, 4, "ProjectStreet@Car", "Questions about the Idea behind ProjectStreet@Car");
