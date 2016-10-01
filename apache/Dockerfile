@@ -15,6 +15,7 @@ RUN echo "deb http://ftp.debian.org/debian jessie-backports main" >> /etc/apt/so
 
 RUN a2enmod ssl
 RUN a2enmod proxy
+RUN a2enmod proxy_http
 
 # get xkcd font
 RUN curl -L http://antiyawn.com/uploads/Humor-Sans-1.0.ttf > /usr/share/matplotlib/mpl-data/fonts/ttf/Humor-Sans.ttf
