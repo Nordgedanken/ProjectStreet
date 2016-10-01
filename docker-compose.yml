@@ -67,6 +67,7 @@ services:
      - DB_PASS=
      - DB_NAME=vmail
      - HOST_MAIL=info@nordgedanken.de Nordgedanken Info
+     - HOST_NAME=projectstreet.dynu.com
 
 #---------
 # backups
