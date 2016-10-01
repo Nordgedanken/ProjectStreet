@@ -8,7 +8,7 @@ COPY html $PROJHOME/html
 COPY bin $PROJHOME/bin
 
 # compile markdown files
-RUN cd $PROJHOME/html/user && ./compile_md.py
+#RUN cd $PROJHOME/html/user && ./compile_md.py
 
 # finish up
 ARG GITTAG
