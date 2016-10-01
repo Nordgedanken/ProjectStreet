@@ -5,7 +5,7 @@
         <!-- names and folders -->
         <app_dir>/root/project/apps</app_dir>
         <download_dir>/root/project/download</download_dir>
-        <download_url>http://ProjectStreet.dynu.com/ProjectStreet/download</download_url>
+        <download_url>http://ProjectStreet.dynu.com/download</download_url>
         <host>ProjectStreet</host>
         <key_dir>/root/project/keys/</key_dir>
         <log_dir>/root/project/log_ProjectStreet</log_dir>
