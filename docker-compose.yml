@@ -62,11 +62,11 @@ services:
      - "993:993"
     tty: true
     environment:
-     DB_HOST=mysql
-     DB_USER=root
-     DB_PASS=
-     DB_NAME=vmail
-     HOST_MAIL=info@nordgedanken.de Nordgedanken Info
+     - DB_HOST=mysql
+     - DB_USER=root
+     - DB_PASS=
+     - DB_NAME=vmail
+     - HOST_MAIL=info@nordgedanken.de Nordgedanken Info
 
 #---------
 # backups
