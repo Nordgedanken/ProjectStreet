@@ -1,16 +1,12 @@
 #!/usr/bin/env python
 
 import argparse
-from os import fchmod, environ, chmod, makedirs as _makedirs
+from os import environ, makedirs as _makedirs
 from os.path import join, exists, basename, dirname, abspath
 import yaml
-from zipfile import ZipFile
 from functools import partial
 from subprocess import check_output
 from shutil import copy as _copy
-from distutils.dir_util import copy_tree
-import xml.etree.ElementTree as et
-from xml.dom import minidom
 
 #some convenience stuff
 rootdir=dirname(abspath(__file__))
