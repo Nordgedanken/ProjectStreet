@@ -27,7 +27,7 @@ def copy(src,dst,clobber=True):
 
 # load and parse options
 
-defaults = yaml.load(open(join(rootdir,'boinc2docker.yml')))
+defaults = yaml.load(open('/root/boinc2docker/boinc2docker.yml'))
 defaults.update({
     'tmpdir':join(rootdir,'build'),
     'projhome':environ.get('PROJHOME')
