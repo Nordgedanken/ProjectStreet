@@ -7,6 +7,7 @@
         <min_vbox_version>30200</min_vbox_version>
         <min_ncpus>1</min_ncpus>
         <max_threads>32</max_threads>
-        <gpu_type>nvidia</gpu_type>
+        <gpu_type>NVIDIA</gpu_type>
+        <gpu_device_num>0</gpu_device_num>
     </plan_class>
 </plan_classes>
