@@ -108,5 +108,10 @@
             <pid_file>boinc2docker_validator.pid</pid_file>
             <output>boinc2docker_validator.log</output>
         </daemon>
+        <daemon>
+            <cmd>sample_substr_validator --app boinc2docker_cuda -d 4 --stderr_string "benchmark.txt" --stderr_string "Doing thread subsystem performance test" --stderr_string "Initializing worker threads..." --stderr_string "total time taken by event execution:"</cmd>
+            <pid_file>boinc2docker_validator.pid</pid_file>
+            <output>boinc2docker_validator.log</output>
+        </daemon>
     </daemons>
 </boinc>
