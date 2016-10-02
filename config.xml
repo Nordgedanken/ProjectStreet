@@ -104,7 +104,7 @@
             <cmd>file_deleter -d 3 </cmd>
         </daemon>
         <daemon>
-            <cmd>script_validator --app boinc2docker --init_script boinc2docker_validator</cmd>
+            <cmd>script_validator --app boinc2docker --init_script boinc2docker_validator -d 4</cmd>
             <pid_file>boinc2docker_validator.pid</pid_file>
             <output>boinc2docker_validator.log</output>
         </daemon>
