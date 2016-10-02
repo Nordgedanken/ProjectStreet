@@ -104,7 +104,7 @@
             <cmd>file_deleter -d 3 </cmd>
         </daemon>
         <daemon>
-            <cmd>sample_substr_validator --app boinc2docker -d 4 --stderr_string "benchmark.txt"</cmd>
+            <cmd>sample_substr_validator --app boinc2docker -d 4 --stderr_string "benchmark.txt" --stderr_string "Doing thread subsystem performance test" --stderr_string "Initializing worker threads..." --stderr_string "total time taken by event execution:"</cmd>
             <pid_file>boinc2docker_validator.pid</pid_file>
             <output>boinc2docker_validator.log</output>
         </daemon>
