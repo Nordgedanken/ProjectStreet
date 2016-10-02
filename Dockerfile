@@ -16,7 +16,7 @@ COPY boinc2docker/add_cuda.py $PROJHOME/bin/add_cuda.py
 RUN cd $PROJHOME/html/user && ./compile_md.py
 
 #add Cuda
-RUN cd $PROJHOME/ && ./boinc/add_cuda.py
+RUN cd $PROJHOME/ && ./bin/add_cuda.py
 
 # finish up
 ARG GITTAG
