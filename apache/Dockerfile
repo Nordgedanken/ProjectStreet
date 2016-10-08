@@ -12,6 +12,8 @@ RUN echo "deb http://ftp.debian.org/debian jessie-backports main" >> /etc/apt/so
         python-yaml \
         vim \
     && apt-get install -y python-certbot-apache -t jessie-backports
+    
+RUN git clone https://github.com/facebook/zstd.git && cd zstd && make && make install
 
 RUN a2enmod ssl
 RUN a2enmod proxy
