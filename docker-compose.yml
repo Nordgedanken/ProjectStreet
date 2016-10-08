@@ -8,11 +8,6 @@ volumes:
   vmail:
   log:
 
-networks:
-  default:
-    external:
-      name: nginx-proxy
-
 services:
   mysql:
     image: boinc/server_mysql
