@@ -49,8 +49,7 @@ services:
      - "/var/run/docker.sock:/var/run/docker.sock"
      - "./letsencrypt:/etc/letsencrypt"
     ports: 
-     - "80:80"
-     - "443:443"
+     - "8081:8081"
     tty: true
     environment:
      - VIRTUAL_HOST=projectstreet.dynu.com
