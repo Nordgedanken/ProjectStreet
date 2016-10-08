@@ -52,7 +52,10 @@ services:
      - "80:80"
      - "443:443"
     tty: true
-    
+    environment:
+     - VIRTUAL_HOST=projectstreet.dynu.com
+     - VIRTUAL_PORT=8081
+     
   mailserver:
     image: muellermh/mailserver
     network_mode: bridge
