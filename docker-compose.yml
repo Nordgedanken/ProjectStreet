@@ -53,6 +53,7 @@ services:
     tty: true
     environment:
      - VIRTUAL_HOST=projectstreet.dynu.com
+      - VIRTUAL_PORT=8081
      
   mailserver:
     image: muellermh/mailserver
