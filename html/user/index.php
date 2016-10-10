@@ -38,9 +38,8 @@ echo <<<END
     <div id="leftcol">
 	  <div id="bigtext">
       <p>
-      Cosmology@Home lets you volunteer your spare computer time (like when your screen saver is on) 
-      to help search for the model which best describes our Universe and to find the range of models 
-      that agree with available cosmological and particle physics data. </p>
+      ProjectStreet@Car lets you volunteer your spare computer time (like when your screen saver is on) 
+      to help to evaluate the state of the roads around the world. </p>
     </div>
 	  <div id="majorlinks">
     <!--[if lte IE 6]>
