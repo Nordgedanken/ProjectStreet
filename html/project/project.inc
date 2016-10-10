@@ -113,7 +113,7 @@ function project_banner($title, $prefix) {
     // Put your project title and logo here
     $url_base = url_base();
     echo "
-    <div class=\"container-fluid\">
+<div class=\"container-fluid\">
 	<!-- Navigation -->
 	<div id='topmatter'>
 		<a href='$url_base'><img src='/img/banner.jpg' border='0' height='200px' width='960px' padding='0px' style=\"position: relative; left: 50%; margin: 0; margin-right: -50%; transform: translate(-50%, 0);\"/></a>
@@ -133,28 +133,31 @@ function project_banner($title, $prefix) {
 	       				<li><a href='/join.php'>JOIN</a></li>
 	       				<li><a href='/faq.php'>FAQ</a></li>
 	       				<li><a href='/forum_index.php'>FORUMS</a></li>
-	       				<li><a href='#'>COMMUNITY</a>
-	       					<ol>
+	       				<li class=\"dropdown\">
+	       					<a href=\"#\" class=\"dropdown-toggle\" data-toggle=\"dropdown\" role=\"button\" aria-haspopup=\"true\" aria-expanded=\"false\">COMMUNITY <span class=\"caret\"></span></a>
+	       					<ul class=\"dropdown-menu\">
 	          					<li><a href='/home.php'>Your Account</a></li>
 	          					<li><a href='/team.php'>Teams</a></li>
 	          					<li><a href='/downloads.php'>Desktop Backgrounds</a></li>
 	          					<li><a href='/profile_menu.php'>Participant Profiles</a></li>
-	      					</ol>
+	      					</ul>
       					</li>
-	      				<li><a href='#'>SERVER</a>
-	         				<ol>
+	      				<li class=\"dropdown\">
+	      					<a href=\"#\" class=\"dropdown-toggle\" data-toggle=\"dropdown\" role=\"button\" aria-haspopup=\"true\" aria-expanded=\"false\">SERVER <span class=\"caret\"></span></a>
+	         				<ul class=\"dropdown-menu\">
 	            				<li><a href='/apps.php'>Applications</a></li>
 	            				<li><a href='/server_status.php'>Server Status</a></li>
 	            				<li><a href='https://github.com/Nordgedanken/ProjectStreet'>Development</a></li>
-	         				</ol>
+	         				</ul>
 	      				</li>
-	      				<li><a href='#'>STATS</a>
-	         				<ol>
+	      				<li class=\"dropdown\">
+	      					<a href=\"#\" class=\"dropdown-toggle\" data-toggle=\"dropdown\" role=\"button\" aria-haspopup=\"true\" aria-expanded=\"false\">STATS <span class=\"caret\"></span></a>
+	         				<ul class=\"dropdown-menu\">
 	            				<li><a href='/top_users.php'>Top Participants</a></li>
 	            				<li><a href='/top_hosts.php'>Top Computers</a></li>
 	            				<li><a href='/top_teams.php'>Top Teams</a></li>
 	            				<li><a href='/stats.php'>Other Statistics</a></li>
-	        				</ol>
+	        				</ul>
 	    				</li>
     				</ul>
 				</div>
