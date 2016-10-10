@@ -10,6 +10,7 @@ RUN echo "deb http://ftp.debian.org/debian jessie-backports main" >> /etc/apt/so
         python-numpy \
         python-scipy \
         python-yaml \
+        python-pip \
         vim \
         git \
     && apt-get install -y python-certbot-apache -t jessie-backports
