@@ -49,8 +49,7 @@ function page_head(
         header ("Pragma: no-cache");                          // HTTP/1.0
     }
 
-    echo "<!DOCTYPE html PUBLIC \"-//W3C//DTD HTML 4.01 Transitional//EN\" \"http://www.w3.org/TR/html4/loose.dtd\">
-    ";
+    echo "<!DOCTYPE html>";
 
     echo "<html><head>\n";
     if ($head_extra) {
@@ -62,12 +61,13 @@ function page_head(
         echo "<title>".sanitize_tags($title_plain)."</title>\n";
     }
     echo "
-    <link rel=\"stylesheet\" type=\"text/css\" href=\"$stylesheet\">
     <link rel=\"stylesheet\" href=\"https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css\" integrity=\"sha384-BVYiiSIFeK1dGmJRAkycuHAHRg32OmUcww7on3RYdg4Va+PmSTsz/K68vbdEjh4u\" crossorigin=\"anonymous\">
     <link rel=\"stylesheet\" href=\"https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap-theme.min.css\" integrity=\"sha384-rHyoN1iRsVXV4nD0JutlnGaslCJuC7uwjduW9SVrLvRYooPp2bWYgmgJQIXwl/Sp\" crossorigin=\"anonymous\">
+    <link rel=\"stylesheet\" type=\"text/css\" href=\"$stylesheet\">
     <link rel=\"alternate\" type=\"application/rss+xml\" title=\"$rssname\" href=\"$rsslink\">
     <link href='https://fonts.googleapis.com/css?family=Merriweather+Sans' rel='stylesheet' type='text/css'>
-    <link href='https://fonts.googleapis.com/css?family=Merriweather+Sans:700' rel='stylesheet' type='text/css'>";
+    <link href='https://fonts.googleapis.com/css?family=Merriweather+Sans:700' rel='stylesheet' type='text/css'>
+    <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no">";
     echo <<<END
     <script type="text/javascript" src="drop_down.js"></script>
     <!--[if lte IE 6]>
@@ -112,7 +112,7 @@ END;
 function project_banner($title, $prefix) {
     // Put your project title and logo here
     $url_base = url_base();
-    echo "<div id='container'>
+    echo "<div class=\"container-fluid\">
    <!-- Navigation -->
    <div id='topmatter'>
     <a href='$url_base'><img src='/img/banner.jpg' border='0' height='200px' width='960px' padding='0px' style=\"position: relative; left: 50%; margin: 0; margin-right: -50%; transform: translate(-50%, 0);\"/></a>
