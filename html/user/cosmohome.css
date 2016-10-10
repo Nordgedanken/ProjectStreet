@@ -566,7 +566,7 @@ table#topnav {
      color: #58555e;
      margin-left: auto;
      margin-right: auto;
-     width: 956px;
+     /*width: 956px;*/
      height: 140px;
      text-align: right;
      font-size: .8em;
