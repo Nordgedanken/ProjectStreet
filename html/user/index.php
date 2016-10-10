@@ -53,7 +53,7 @@ echo <<<END
     </div>
     <![endif]-->
 	  </div>
-	  <div id="feature">
+	  <!-- <div id="feature">
 	     <span class="h2"><img src="img/concept_icon.png" alt="concept" />FEATURED CONCEPT: Dark Matter</span>
      <div class="featuretext">
      Unlike ordinary matter, dark matter does not emit or absorb light--or any other type of electromagnetic radiation. Consequently, dark matter cannot be observed directly using a telescope or any other astronomical instrument that has been developed by humans. If dark matter has these strange properties, how do we know that it exists in the first place?
@@ -63,7 +63,7 @@ echo <<<END
       <br>Combining all the available evidence, dark matter represents about 83% of the matter content of the universe.
        Read more about dark matter on 
      <a href=http://teacherlink.ed.usu.edu/tlnasa/reference/ImagineDVD/Files/imagine/docs/science/know_l1/dark_matter.html>this web page</a>. Let us know your questions and comments on the <a href=http://www.cosmologyathome.org/forum_thread.php?id=926>message board.</a></div>
-	  </div>
+	  </div> -->
 END;
 
 if ($stopped) {
