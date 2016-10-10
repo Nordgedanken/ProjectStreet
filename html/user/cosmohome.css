@@ -687,29 +687,36 @@ form {
      background-repeat: no-repeat;
      border-left: none;
      border-right: none;
-     padding: 0;
-     margin: 0;
+     padding:5px;
+     overflow:hidden;
 }
 
 #leftcol {
      width: 50%;
-     /*float: left;*/
+     float:left;
      height: 100%;
-     /*padding: 0;
-     margin: 0;*/
+     position:relative;
+     padding:3px;
      display: inline-block;
 }
 
 #rightcol {
      width: 50%;
      /*float: right;*/
-     height: 100%;
+     float:right;
      /*border-left: 1px solid bb#CCCCCC;
      padding-right: 1px;
      margin: 0;*/
      display: inline-block;
-     min-height: 658px;
+     /*min-height: 658px;*/
      background-color: #161616;
+     position: relative;
+     padding:3px;
+}
+
+.leftcol .rightcol {
+     padding-bottom:8000px;
+     margin-bottom:-8000px;
 }
 
 #subcontainer {
