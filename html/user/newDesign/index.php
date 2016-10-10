@@ -1,14 +1,14 @@
 <?php
 //ini_set("error_reporting", E_ALL);
 //ini_set("display_errors", "on");
-require_once("../inc/db.inc");
-require_once("../inc/util.inc");
-require_once("../inc/news.inc");
-require_once("../inc/cache.inc");
-require_once("../inc/uotd.inc");
-require_once("../inc/sanitize_html.inc");
-require_once("../inc/translation.inc");
-require_once("../inc/text_transform.inc");
+require_once("../../inc/db.inc");
+require_once("../../inc/util.inc");
+require_once("../../inc/news.inc");
+require_once("../../inc/cache.inc");
+require_once("../../inc/uotd.inc");
+require_once("../../inc/sanitize_html.inc");
+require_once("../../inc/translation.inc");
+require_once("../../inc/text_transform.inc");
 //require_once("../inc/replacePngTags.inc");
 require_once("../../project/project_new.inc");
 function show_nav() {
