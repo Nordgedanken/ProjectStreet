@@ -10,7 +10,7 @@ require_once("../inc/sanitize_html.inc");
 require_once("../inc/translation.inc");
 require_once("../inc/text_transform.inc");
 //require_once("../inc/replacePngTags.inc");
-require_once("../project/project_new.inc");
+require_once("../project/project.inc");
 function show_nav() {
     $config = get_config();
     $master_url = parse_config($config, "<master_url>");
