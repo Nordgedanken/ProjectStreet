@@ -114,6 +114,7 @@ echo <<<END
   <!--</div>--> <!--END MAINROW-->
   <!--</tbody>-->
   <!--</table>-->
+   <div class="clr"></div>
   </div>
  </div> <!--END MAINCONTENT-->
  
