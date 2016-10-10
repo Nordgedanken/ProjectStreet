@@ -660,10 +660,10 @@ form {
 }
 
 #maincontent {
-     width: 960px;
-     /*height: 1213px;*/
+     /*width: 960px;
+     height: 1213px;
      padding: 0;
-     display: table;
+     display: table;*/
 }
 
 #borders {
@@ -683,7 +683,7 @@ form {
 }
 
 #topmatter {
-     width: 960px;
+     /*width: 960px;*/
      background-repeat: no-repeat;
      border-left: none;
      border-right: none;
@@ -692,22 +692,22 @@ form {
 }
 
 #leftcol {
-     width: 460px;
-     float: left;
+     width: 50%;
+     /*float: left;*/
      height: 100%;
      /*padding: 0;
      margin: 0;*/
-     display: block;
+     display: inline-block;
 }
 
 #rightcol {
-     width: 491px;
-     float: right;
+     width: 50%;
+     /*float: right;*/
      height: 100%;
      /*border-left: 1px solid bb#CCCCCC;
      padding-right: 1px;
      margin: 0;*/
-     display: block;
+     display: inline-block;
      min-height: 658px;
      background-color: #161616;
 }
@@ -927,7 +927,7 @@ tr.row1, tr.row0 {
 div#container {
      margin-left: auto;
      margin-right: auto;
-     width: 960px;
+     /*width: 960px;*/
      border-right: 1px solid /*bb*/#CCCCCC;
      border-left: 1px solid /*bb*/#CCCCCC;
 }
