@@ -95,6 +95,11 @@
     </tasks>
     <daemons>
         <daemon>
+            <cmd>script_assimilator --app boinc2docker --init_script "boinc2docker_assimilator files"</cmd>
+            <pid_file>boinc2docker_assimilator.pid</pid_file>
+            <output>boinc2docker_assimilator.log</output>
+        </daemon>
+        <daemon>
             <cmd>feeder -d 3</cmd>
         </daemon>
         <daemon>
