@@ -13,7 +13,7 @@ define("IMAGE_URL", "user_profile/images/");
 define("PROFILE_PATH", "../user_profile/");
 define("PROFILE_URL", "user_profile/");
 define("LANGUAGE_FILE", "languages.txt");
-define("STYLESHEET", "cosmohome.css");
+define("STYLESHEET", "projectstreet.css");
 define("FORUM_QA_MERGED_MODE", true);
 define("COPYRIGHT_HOLDER", "<a href=\"http://nordgedanken.de\">Marcel Radzio</a>");
 define("SYS_ADMIN_EMAIL", "info@nordgedanken.de");
