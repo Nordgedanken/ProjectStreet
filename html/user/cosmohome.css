@@ -623,8 +623,8 @@ form {
 }
 
 #majorlinks {
-     width: 449px;
-     height: 418px;
+     /*width: 449px;
+     height: 418px;*/
      background-image: url(img/navigation/image_of_week/img1.jpg);
      border-top: none;
      border-bottom: 1px solid /*bb*/#CCCCCC;
@@ -634,7 +634,7 @@ form {
 }
 
 #bigtext {
-     width: 450px;
+     /*width: 450px;*/
      border-bottom: 1px solid /*bb*/#CCCCCC;
      background-color: #161616;
      overflow: hidden;
