@@ -9,7 +9,7 @@
 
 
 ### What if my computer doesn't meet requirements? ### 
-ProjectStreet@Car runs one "apps." The [requirements list](join.php#requirements) is for the default app (named *boinc2docker*) and is the only supported App. Older systems are not compatible.
+ProjectStreet@Car runs one "app." The [requirements list](join.php#requirements) is for the default app (named *boinc2docker*) and is the only supported App. Older systems are not compatible.
 
 ### What is VT-x or AMD-v and why do I need it? ###
 {:#vtx}
