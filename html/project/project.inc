@@ -168,8 +168,7 @@ function project_banner($title, $prefix) {
 }
 
 function project_footer($show_return, $show_date) {
-    echo "
-          <div id=\"footer\">";
+    echo "<footer class='footer'>";
 
     if ($show_return) {
         echo "<a href=".URL_BASE.">Return to ".PROJECT." main page</a>\n";
@@ -177,7 +176,6 @@ function project_footer($show_return, $show_date) {
     echo "<br><br>Copyright &copy; ".date("Y ").COPYRIGHT_HOLDER."<br/>\n";
 
 	echo <<<END
-
 If you have any questions or comments regarding the content of this site, please contact <a href='http://nordgedanken.de'>Marcel Radzio</a><br/>
 END;
     if ($show_date) {
@@ -185,8 +183,9 @@ END;
     }
 	echo "
 	<div id='sponsors'>
-<p>No Sponsors at this time :)</p>
-</div></div>";
+		<p>No Sponsors at this time :)</p>
+	</div>
+	</footer>";
 }
 
 function show_profile_heading1() {
