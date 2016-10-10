@@ -5,7 +5,7 @@
 * Download and install [BOINC](http://boinc.berkeley.edu/download.php)
 * Download and install [Virtualbox](https://www.virtualbox.org/wiki/Downloads)
     * *Note:* On Windows use the "+Virtualbox" link when downloading BOINC and it will do this step for you.
-* Run BOINC and select "Add New Project". When prompted enter "cosmologyathome.org" and create your account. 
+* Run BOINC and select "Add New Project". When prompted enter "projectstreet.nordgedanken.de" and create your account. 
 * That's it! Your computer will now automatically download and run jobs. 
 
 
