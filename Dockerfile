@@ -9,7 +9,6 @@ RUN apt-get update && apt-get install -y ruby-kramdown
 COPY config.xml boincserver.httpd.conf $PROJHOME/
 COPY html $PROJHOME/html
 COPY bin $PROJHOME/bin
-RUN pip install zstd
 COPY boinc2docker/plan_class_spec.xml $PROJHOME/plan_class_spec.xml
 
 # compile markdown files
