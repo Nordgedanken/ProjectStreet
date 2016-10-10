@@ -143,7 +143,7 @@ function project_banner($title, $prefix) {
 							</ul>
 					</li>
 					<li class='dropdown'>
-						<a href='#' class="dropdown-toggle" data-toggle='dropdown' role='button' aria-haspopup='true' aria-expanded='false'>SERVER <span class='caret'></span></a>
+						<a href='#' class='dropdown-toggle' data-toggle='dropdown' role='button' aria-haspopup='true' aria-expanded='false'>SERVER <span class='caret'></span></a>
 						<ul class='dropdown-menu'>
 							<li><a href='/apps.php'>Applications</a></li>
 							<li><a href='/server_status.php'>Server Status</a></li>
