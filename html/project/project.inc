@@ -15,7 +15,7 @@ define("PROFILE_URL", "user_profile/");
 define("LANGUAGE_FILE", "languages.txt");
 define("STYLESHEET", "cosmohome.css");
 define("FORUM_QA_MERGED_MODE", true);
-define("COPYRIGHT_HOLDER", "Department of Astronomy at the <a href=\"http://www.illinois.edu\">University of Illinois at Urbana-Champaign</a>");
+define("COPYRIGHT_HOLDER", "<a href=\"http://nordgedanken.de\">Marcel Radzio</a>");
 define("SYS_ADMIN_EMAIL", "info@nordgedanken.de");
 define("UOTD_ADMIN_EMAIL", "info@nordgedanken.de"); # who gets user of the day pool running low e-mails?
 
@@ -73,13 +73,13 @@ function page_head(
     <![endif]-->
 
     <script>
-      (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
-      (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
-      m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
-      })(window,document,'script','//www.google-analytics.com/analytics.js','ga');
+  	(function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+  	(i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+  	m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+  	})(window,document,'script','https://www.google-analytics.com/analytics.js','ga');
 
-      ga('create', 'UA-62011923-2', 'auto');
-      ga('send', 'pageview');
+  	ga('create', 'UA-85483437-1', 'auto');
+  	ga('send', 'pageview');
 
     </script>
 
@@ -159,11 +159,7 @@ function project_footer($show_return, $show_date) {
 
 	echo <<<END
 
-If you have any questions or comments regarding the content of this site, please contact <a href='http://www.cosmicmar.com'>Marius Millea</a><br/>
-This material is based upon work supported by the National Science Foundation under Grant No. AST0507676.<br/>
-Links to external sites are provided as a convenience to our users. The Department of Astronomy does not control or endorse the content of external sites.<br\>
-Any opinions, findings, and conclusions or recommendations expressed in this material are those of the author(s) and do not necessarily reflect the views of the National Science Foundation.<br/>
-We would like to thank both NASA and the Planck project for their support of Cosmology@Home</br>
+If you have any questions or comments regarding the content of this site, please contact <a href='http://nordgedanken.de'>Marcel Radzio</a><br/>
 END;
     if ($show_date) {
         echo "<font size=-2 color=bbbbbb>Generated ",time_str(time()),"</font>\n";
