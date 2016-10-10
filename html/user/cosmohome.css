@@ -17,6 +17,7 @@ body {
      margin: 0 auto 20px;
 }
 
+.clr { clear:both; }
 
 a {
      color: #BB6699;
