@@ -124,7 +124,6 @@ function project_banner($title, $prefix) {
               <li><a href='/team.php'>Teams</a></li>
               <li><a href='/downloads.php'>Desktop Backgrounds</a></li>
               <li><a href='/profile_menu.php'>Participant Profiles</a></li>
-              <li><a href='/wandelt_letter.php'>Ben's Welcome Letter</a></li>
             </ol>
           <li><a href='#'>SERVER</a>
             <ol>
@@ -135,7 +134,6 @@ function project_banner($title, $prefix) {
 
           <li><a href='#'>STATS</a>
             <ol>
-              <li><a href='/lsplitsims_stats.php'>Planck Sims Stats</a></li>
               <li><a href='/top_users.php'>Top Participants</a></li>
               <li><a href='/top_hosts.php'>Top Computers</a></li>
               <li><a href='/top_teams.php'>Top Teams</a></li>
@@ -166,7 +164,7 @@ END;
     }
 	echo "
 	<div id='sponsors'>
-<p>None at this time :)</p>
+<p>No Sponsors at this time :)</p>
 </div></div>";
 }
 
