@@ -575,6 +575,7 @@ table#topnav {
      padding-bottom: 10px;
      padding-right: 5px;
      padding-top: 5px;
+     background-color: #161616;
 }
 
 #sponsors {
@@ -635,6 +636,7 @@ form {
 #bigtext {
      width: 450px;
      border-bottom: 1px solid /*bb*/#CCCCCC;
+     background-color: #161616;
      overflow: hidden;
 }
 
@@ -707,6 +709,7 @@ form {
      margin: 0;
      display: block;
      min-height: 1100px;
+     background-color: #161616;
 }
 
 #subcontainer {
@@ -793,6 +796,7 @@ form {
      border-top: solid 1px /*bb*/#CCCCCC;
      border-bottom: solid 1px /*bb*/#CCCCCC;
      font-style: inherit;
+     background-color: #161616;
 }
 
 #navmenu ul {
