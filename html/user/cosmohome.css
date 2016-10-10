@@ -17,7 +17,6 @@ body {
      margin: 0 auto 20px;
 }
 
-.clr { clear:both; }
 
 a {
      color: #BB6699;
@@ -566,7 +565,7 @@ table#topnav {
      color: #58555e;
      margin-left: auto;
      margin-right: auto;
-     /*width: 956px;*/
+     width: 956px;
      height: 140px;
      text-align: right;
      font-size: .8em;
@@ -624,8 +623,8 @@ form {
 }
 
 #majorlinks {
-     /*width: 449px;*/
-     min-height: 425px;
+     width: 449px;
+     height: 418px;
      background-image: url(img/navigation/image_of_week/img1.jpg);
      border-top: none;
      border-bottom: 1px solid /*bb*/#CCCCCC;
@@ -635,7 +634,7 @@ form {
 }
 
 #bigtext {
-     /*width: 450px;*/
+     width: 450px;
      border-bottom: 1px solid /*bb*/#CCCCCC;
      background-color: #161616;
      overflow: hidden;
@@ -661,10 +660,10 @@ form {
 }
 
 #maincontent {
-     /*width: 960px;
+     width: 962px;
      height: 1213px;
      padding: 0;
-     display: table;*/
+     display: table;
 }
 
 #borders {
@@ -677,46 +676,40 @@ form {
 }
 
 #mainrow {
-     /*width: 964px;*/
+     width: 964px;
      margin: 0;
      padding: 0;
      display: table-row;
 }
 
 #topmatter {
-     /*width: 960px;*/
+     width: 960px;
      background-repeat: no-repeat;
      border-left: none;
      border-right: none;
-     padding:5px;
-     overflow:hidden;
+     padding: 0;
+     margin: 0;
 }
 
 #leftcol {
-     width: 49.369%;
-     float:left;
+     width: 450px;
+     float: left;
      height: 100%;
-     position:relative;
-     display: inline-block;
+     padding: 0;
+     margin: 0;
+     display: block;
 }
 
 #rightcol {
-     width: 50%;
-     /*float: right;*/
-     float:right;
-     /*border-left: 1px solid bb#CCCCCC;
+     width: 510px;
+     float: right;
+     height: 100%;
+     border-left: 1px solid /*bb*/#CCCCCC;
      padding-right: 1px;
-     margin: 0;*/
-     display: inline-block;
-     /*min-height: 658px;*/
+     margin: 0;
+     display: block;
+     min-height: 1100px;
      background-color: #161616;
-     position: relative;
-     padding:3px;
-}
-
-.leftcol .rightcol {
-     padding-bottom:8000px;
-     margin-bottom:-8000px;
 }
 
 #subcontainer {
@@ -934,7 +927,7 @@ tr.row1, tr.row0 {
 div#container {
      margin-left: auto;
      margin-right: auto;
-     /*width: 960px;*/
+     width: 960px;
      border-right: 1px solid /*bb*/#CCCCCC;
      border-left: 1px solid /*bb*/#CCCCCC;
 }
