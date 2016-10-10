@@ -623,8 +623,8 @@ form {
 }
 
 #majorlinks {
-     /*width: 449px;
-     height: 418px;*/
+     /*width: 449px;*/
+     min-height: 425px;
      background-image: url(img/navigation/image_of_week/img1.jpg);
      border-top: none;
      border-bottom: 1px solid /*bb*/#CCCCCC;
