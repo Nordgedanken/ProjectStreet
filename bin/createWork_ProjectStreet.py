@@ -2,7 +2,8 @@
 
 import os.path
 import time
-
+from subprocess import call
+import tarfile
 ### Need to add  way to find job
 
 while not os.path.exists(file_path):
@@ -10,5 +11,6 @@ while not os.path.exists(file_path):
 
 if os.path.isfile(file_path):
     # read file
+    call(["ls", "-l"])
 else:
     raise ValueError("%s isn't a file!" % file_path)
