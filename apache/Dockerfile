@@ -16,6 +16,8 @@ RUN echo "deb http://ftp.debian.org/debian jessie-backports main" >> /etc/apt/so
     
 RUN git clone https://github.com/facebook/zstd.git && cd zstd && make && make install
 
+RUN pip install zstandard
+
 RUN a2enmod ssl
 RUN a2enmod proxy
 RUN a2enmod proxy_http
