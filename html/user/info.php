@@ -34,7 +34,7 @@ echo "
 
     <p>".tra(" ", PROJECT)."
     <p>".tra("<a href=\"http://boinc.berkeley.edu/download.php\">Download</a> and install the BOINC software for you computer.", PROJECT)."
-    <p>".tra("Run the BOINC Manager and add a new project with \"cosmologyathome.org\" as the project URL.", PROJECT)."
+    <p>".tra("Run the BOINC Manager and add a new project with \"projectstreet.nordgeanken.de\" as the project URL.", PROJECT)."
 
 <h2>".tra("Our Policies", PROJECT)."</h3>
     <p>".tra(" ", PROJECT)."
