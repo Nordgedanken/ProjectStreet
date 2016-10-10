@@ -693,11 +693,10 @@ form {
 }
 
 #leftcol {
-     width: 50%;
+     width: 49.369%;
      float:left;
      height: 100%;
      position:relative;
-     padding:3px;
      display: inline-block;
 }
 
