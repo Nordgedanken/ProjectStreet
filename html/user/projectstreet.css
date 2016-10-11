@@ -19,6 +19,7 @@ body {
 .footer {
   background-color: #EEEEEE !important;
   bottom: 0 !important;
+  position: absolute !important;
 }
 
 .logo {
