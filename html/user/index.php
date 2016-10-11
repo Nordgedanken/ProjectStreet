@@ -107,15 +107,9 @@ echo "
 
 echo <<<END
 
-	 </div>  <!--END RIGHT COLUMN-->
-  <!--</tr>-->
-  <!--</div>--> <!--END MAINROW-->
-  <!--</tbody>-->
-  <!--</table>-->
-   <div class="clr"></div>
+  </div>  <!--END RIGHT COLUMN-->
   </div>
- 
-  
+  </div>
 END;
 
     include "schedulers.txt";
