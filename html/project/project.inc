@@ -160,11 +160,13 @@ function project_banner($title, $prefix) {
 			</div>
 		</div>
 	</nav>
-	<div class='wide'>
-  		<div class='col-xs-5 line'><hr></div>
-		<div class='col-xs-2 logo'>ProjectStreet@Car</div>
-		<div class='col-xs-5 line'><hr></div>
-	</div>
+	<a href='$url_base'>
+		<div class='wide'>
+  			<div class='col-xs-5 line'><hr></div>
+			<div class='col-xs-2 logo'>ProjectStreet@Car</div>
+			<div class='col-xs-5 line'><hr></div>
+		</div>
+	</a>
 	<div class='container-fluid'>
    ";
 }
