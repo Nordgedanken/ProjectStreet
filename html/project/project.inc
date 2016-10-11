@@ -114,11 +114,8 @@ function project_banner($title, $prefix) {
     // Put your project title and logo here
     $url_base = url_base();
     echo "
-	<div class='page-header'>
-		<a href='$url_base'><img src='/img/banner.jpg' border='0' height='200px' width='960px' padding='0px' style=\"position: relative; left: 50%; margin: 0; margin-right: -50%; transform: translate(-50%, 0);\"/></a>
-	</div>
-	<nav class='navbar navbar-default'>
-		<div class='container-fluid'>
+	<nav class='navbar navbar-inverse navbar-fixed-top'>
+		<div class='container'>
 		<!-- Brand and toggle get grouped for better mobile display -->
 			<div class='navbar-header'>
 				<button type='button' class='navbar-toggle collapsed' data-toggle='collapse' data-target='#bs-example-navbar-collapse-1' aria-expanded='false'>
@@ -163,6 +160,11 @@ function project_banner($title, $prefix) {
 			</div>
 		</div>
 	</nav>
+	<div class='wide'>
+  		<div class='col-xs-5 line'><hr></div>
+		<div class='col-xs-2 logo'>Logo</div>
+		<div class='col-xs-5 line'><hr></div>
+	</div>
 	<div class='container-fluid'>
    ";
 }
