@@ -20,6 +20,7 @@ body {
   background-color: #EEEEEE !important;
   bottom: 0 !important;
   position: absolute !important;
+  width: 100% !important;
 }
 
 .logo {
