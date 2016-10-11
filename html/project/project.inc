@@ -172,7 +172,7 @@ function project_banner($title, $prefix) {
 }
 
 function project_footer($show_return, $show_date) {
-    echo "<footer class='footer'>";
+    echo "<footer class='footer'><div class='container'>";
 
     if ($show_return) {
         echo "<a href=".URL_BASE.">Return to ".PROJECT." main page</a>\n";
@@ -189,7 +189,7 @@ END;
 	<div id='sponsors'>
 		<p>No Sponsors at this time :)</p>
 	</div>
-	</footer>";
+	</div></footer>";
 }
 
 function show_profile_heading1() {
