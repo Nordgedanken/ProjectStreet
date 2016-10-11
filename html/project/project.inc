@@ -172,7 +172,7 @@ function project_banner($title, $prefix) {
 }
 
 function project_footer($show_return, $show_date) {
-    echo "<footer class='footer'><div class='container'>";
+    echo "</div><footer class='footer'><div class='container'>";
 
     if ($show_return) {
         echo "<a href=".URL_BASE.">Return to ".PROJECT." main page</a>\n";
