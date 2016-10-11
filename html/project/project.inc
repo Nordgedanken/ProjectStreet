@@ -114,7 +114,6 @@ function project_banner($title, $prefix) {
     // Put your project title and logo here
     $url_base = url_base();
     echo "
-<div class='container-fluid'>
 	<div class='page-header'>
 		<a href='$url_base'><img src='/img/banner.jpg' border='0' height='200px' width='960px' padding='0px' style=\"position: relative; left: 50%; margin: 0; margin-right: -50%; transform: translate(-50%, 0);\"/></a>
 	</div>
@@ -164,6 +163,7 @@ function project_banner($title, $prefix) {
 			</div>
 		</div>
 	</nav>
+	<div class='container-fluid'>
    ";
 }
 
