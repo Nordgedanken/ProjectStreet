@@ -105,7 +105,7 @@ echo "
 
 echo <<<END
 
-  </div>  <!--END RIGHT COLUMN-->
+  </div>
   </div>
   </div>
 END;
