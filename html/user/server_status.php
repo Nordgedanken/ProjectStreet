@@ -262,7 +262,7 @@ function show_status_html($x) {
     }
     echo "</p></tr>\n";
     end_table();
-    echo "<div>";
+    echo "<doofer tag den ich finden kann>";
     page_tail();
 }
 
