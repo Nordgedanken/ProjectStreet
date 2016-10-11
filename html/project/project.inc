@@ -162,7 +162,7 @@ function project_banner($title, $prefix) {
 	</nav>
 	<div class='wide'>
   		<div class='col-xs-5 line'><hr></div>
-		<div class='col-xs-2 logo'>Logo</div>
+		<div class='col-xs-2 logo'>ProjectStreet@Car</div>
 		<div class='col-xs-5 line'><hr></div>
 	</div>
 	<div class='container-fluid'>
