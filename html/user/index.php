@@ -51,8 +51,8 @@ echo <<<END
     </div>
     <![endif]-->
 	  </div>
-	  <div id="feature">
-	     <h2><img src="img/concept_icon.png" alt="concept" />FEATURED CONCEPT: Dark Matter</h2>
+	  <div id="feature" style="padding: 5px 5px 5px 5px;">
+	     <h2>FEATURED CONCEPT: Dark Matter</h2>
      <div class="featuretext">
      Unlike ordinary matter, dark matter does not emit or absorb light--or any other type of electromagnetic radiation. Consequently, dark matter cannot be observed directly using a telescope or any other astronomical instrument that has been developed by humans. If dark matter has these strange properties, how do we know that it exists in the first place?
      <br> 
