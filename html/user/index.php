@@ -35,11 +35,9 @@ page_head(PROJECT, null, null, "yes");
 echo <<<END
    <div class="row">
     <div class="col-md-6">
-	  <div id="bigtext">
-      <p>
+      <p class="bigtext">
       ProjectStreet@Car lets you volunteer your spare computer time (like when your screen saver is on) 
       to help to evaluate the state of the roads around the world. </p>
-    </div>
 	  <div id="majorlinks">
     <!--[if lte IE 6]>
     <div style="display: none">
