@@ -262,7 +262,7 @@ function show_status_html($x) {
     }
     echo "</p></tr>\n";
     end_table();
-    <div>
+    echo "<div>";
     page_tail();
 }
 
