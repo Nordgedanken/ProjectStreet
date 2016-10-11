@@ -200,7 +200,7 @@ function show_status_html($x) {
     <table class='table table-bordered'>
         <thead>
             <tr>
-                <th>".tra("Tasks by application")."</th>
+                <th colspan='5'>".tra("Tasks by application")."</th>
             </tr>
             <tr>
                 <th>".tra("Application")."</th>
