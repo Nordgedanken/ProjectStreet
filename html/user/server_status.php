@@ -105,11 +105,8 @@ function show_status_html($x) {
     page_head(tra("Project status"));
     $j = $x->jobs;
     $daemons = $x->daemons;
-    echo "<table class='table table-bordered'><tr>\n";
     echo "<h2>".tra("Computing status")."</h2>\n";
-    start_table();
-    echo "<tr><td>\n";
-    start_table();
+    echo "<table class='table table-bordered'><tr>\n";
     echo "<thead><tr>".tra("Work")."</tr><tr>#</tr></thead>";
     item_html("Tasks ready to send", $j->results_ready_to_send);
     item_html("Tasks in progress", $j->results_in_progress);
