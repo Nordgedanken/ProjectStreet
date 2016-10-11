@@ -117,25 +117,23 @@ function show_status_html($x) {
     echo "<tr><td>Tasks waiting for file deletion</td><td>".$j->results_need_file_delete."</td></tr>";
     echo "<tr><td>Transitioner backlog (hours)</td><td>".number_format($j->transitioner_backlog, 2)."</td></tr>";
     echo "</tbody></table>";
-    start_table();
-    table_header(tra("Users"), "#");
-    item_html("With credit", $j->users_with_credit);
-    item_html("With recent credit", $j->users_with_recent_credit);
-    item_html("Registered in past 24 hours", $j->users_past_24_hours);
-    table_header(tra("Computers"), "#");
-    item_html("With credit", $j->hosts_with_credit);
-    item_html("With recent credit", $j->hosts_with_recent_credit);
-    item_html("Registered in past 24 hours", $j->hosts_past_24_hours);
-    item_html("Current GigaFLOPS", round($j->flops, 2));
-    end_table();
-    end_table();
-    start_table();
-    echo "<tr><th colspan=5>".tra("Tasks by application")."</th></tr>\n";
-    table_header(
-        tra("Application"), tra("Unsent"), tra("In progress"),
-        tra("Runtime of last 100 tasks in hours: average, min, max"),
-        tra("Users in last 24 hours")
-    );
+    echo "<table class='table table-bordered'>";
+    echo "<thead><tr><th>".tra("Users")."</th><th>#</th></tr></thead>";
+    echo "<tbody>";
+    echo "<tr><td>With credit</td><td>".$j->users_with_credit."</td></tr>";
+    echo "<tr><td>With recent credit</td><td>".$j->users_with_recent_credit."</td></tr>";
+    echo "<tr><td>Registered in past 24 hours</td><td>".$j->users_past_24_hours."</td></tr>";
+    echo "</tbody>";
+    echo "<thead><tr><th>".tra("Computers")."</th><th>#</th></tr></thead>";
+    echo "<tbody>";
+    echo "<tr><td>With credit</td><td>".$j->hosts_with_credit."</td></tr>";
+    echo "<tr><td>With recent credit</td><td>".$j->hosts_with_recent_credit."</td></tr>";
+    echo "<tr><td>Registered in past 24 hours</td><td>".$j->hosts_past_24_hours."</td></tr>";
+    echo "<tr><td>Current GigaFLOPS</td><td>".round($j->flops, 2)."</td></tr>";
+    echo "</tbody></table>";
+    echo "<table class='table table-bordered'>";
+    echo "<thead><tr><th>".tra("Tasks by application")."</th></tr>";
+    echo "<tr><th>".tra("Application")."</th><th>".tra("Unsent")."</th><th>".tra("In progress")."</th><th>".tra("Runtime of last 100 tasks in hours: average, min, max")."</th><th>".tra("Users in last 24 hours")."</th></tr></thead>";
     $i = 0;
     foreach ($j->apps as $app) {
         $avg = round($app->info->avg, 2);
