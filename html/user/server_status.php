@@ -106,9 +106,10 @@ function show_status_html($x) {
     $j = $x->jobs;
     $daemons = $x->daemons;
     echo "<h2>".tra("Computing status")."</h2>\n";
-    echo "<table class='table table-bordered'><tr>\n";
-    echo "<thead><tr>".tra("Work")."</tr><tr>#</tr></thead>";
-    item_html("Tasks ready to send", $j->results_ready_to_send);
+    echo "<table class='table table-bordered'>";
+    echo "<thead><tr><th>".tra("Work")."</th><th>#</th></tr></thead>";
+    echo "<tbody>";
+    echo "<tr><td>"Tasks ready to send"</td><td>".$j->results_ready_to_send."</td></tr>";
     item_html("Tasks in progress", $j->results_in_progress);
     item_html("Workunits waiting for validation", $j->wus_need_validate);
     item_html("Workunits waiting for assimilation", $j->wus_need_assimilate);
