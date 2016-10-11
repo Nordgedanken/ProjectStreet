@@ -36,6 +36,7 @@ echo <<<END
    <div class="row">
     <div class="col-md-6">
       <p class="bigtext">
+      <h2>Infos</h2>
       ProjectStreet@Car lets you volunteer your spare computer time (like when your screen saver is on) 
       to help to evaluate the state of the roads around the world. </p>
 	  <div id="majorlinks">
@@ -50,7 +51,7 @@ echo <<<END
     </div>
     <![endif]-->
 	  </div>
-	  <!-- <div id="feature">
+	  <div id="feature">
 	     <span class="h2"><img src="img/concept_icon.png" alt="concept" />FEATURED CONCEPT: Dark Matter</span>
      <div class="featuretext">
      Unlike ordinary matter, dark matter does not emit or absorb light--or any other type of electromagnetic radiation. Consequently, dark matter cannot be observed directly using a telescope or any other astronomical instrument that has been developed by humans. If dark matter has these strange properties, how do we know that it exists in the first place?
@@ -60,7 +61,7 @@ echo <<<END
       <br>Combining all the available evidence, dark matter represents about 83% of the matter content of the universe.
        Read more about dark matter on 
      <a href=http://teacherlink.ed.usu.edu/tlnasa/reference/ImagineDVD/Files/imagine/docs/science/know_l1/dark_matter.html>this web page</a>. Let us know your questions and comments on the <a href=http://www.cosmologyathome.org/forum_thread.php?id=926>message board.</a></div>
-	  </div> -->
+	  </div>
 END;
 
 if ($stopped) {
@@ -91,17 +92,12 @@ if (!$stopped) {
 }
 
 echo "
-    <tr><td class=news>
-    <h2 class=headline>News</h2>
+    <h2>News</h2>
       <p>
 ";
 include("motd.php");
 
 show_news(0, 5);
-echo "
-    </td>
-    </tr></table>
-";
 
 echo <<<END
 
