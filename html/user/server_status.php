@@ -243,13 +243,19 @@ function show_status_html($x) {
             <tbody>
         ";
     foreach ($daemons->local_daemons as $d) {
-        daemon_html($d);
+        if (!empty($d)){
+            daemon_html($d);
+        }
     }
     foreach ($daemons->remote_daemons as $d) {
-        daemon_html($d);
+        if (!empty($d)){
+            daemon_html($d);
+        }
     }
     foreach ($daemons->disabled_daemons as $d) {
-        daemon_html($d);
+        if (!empty($d)){
+            daemon_html($d);
+        }
     }
     echo "</tbody></table>
     <p align='right'>";
@@ -268,8 +274,7 @@ function show_status_html($x) {
         echo "<br>";
         server_status_project_info();
     }
-    echo "</p></tr>\n";
-    end_table();
+    echo "</p>";
     
     echo "</div>";
     page_tail();
