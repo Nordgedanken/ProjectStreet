@@ -251,8 +251,8 @@ function show_status_html($x) {
     foreach ($daemons->disabled_daemons as $d) {
         daemon_html($d);
     }
-    echo "</tbody></table>"
-    echo "<p align='right'>";
+    echo "</tbody></table>
+    <p align='right'>";
     echo "Task data as of ".time_str($j->cached_time)."<br>";
 
     if ($j->db_revision) {
