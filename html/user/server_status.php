@@ -106,7 +106,7 @@ function show_status_html($x) {
     $j = $x->jobs;
     $daemons = $x->daemons;
     echo "<h2>".tra("Computing status")."</h2>\n";
-    echo "<table class='table table-bordered'>";
+    echo "<div class='row'><div class='col-md-6'><table class='table table-bordered'>";
     echo "<thead><tr><th>".tra("Work")."</th><th>#</th></tr></thead>";
     echo "<tbody>";
     echo "<tr><td>Tasks ready to send</td><td>".$j->results_ready_to_send."</td></tr>";
@@ -116,8 +116,8 @@ function show_status_html($x) {
     echo "<tr><td>Workunits waiting for file deletion</td><td>".$j->wus_need_file_delete."</td></tr>";
     echo "<tr><td>Tasks waiting for file deletion</td><td>".$j->results_need_file_delete."</td></tr>";
     echo "<tr><td>Transitioner backlog (hours)</td><td>".number_format($j->transitioner_backlog, 2)."</td></tr>";
-    echo "</tbody></table>";
-    echo "<table class='table table-bordered'>";
+    echo "</tbody></table></div>";
+    echo "<div class='col-md-6'><table class='table table-bordered'>";
     echo "<thead><tr><th>".tra("Users")."</th><th>#</th></tr></thead>";
     echo "<tbody>";
     echo "<tr><td>With credit</td><td>".$j->users_with_credit."</td></tr>";
@@ -130,7 +130,7 @@ function show_status_html($x) {
     echo "<tr><td>With recent credit</td><td>".$j->hosts_with_recent_credit."</td></tr>";
     echo "<tr><td>Registered in past 24 hours</td><td>".$j->hosts_past_24_hours."</td></tr>";
     echo "<tr><td>Current GigaFLOPS</td><td>".round($j->flops, 2)."</td></tr>";
-    echo "</tbody></table>";
+    echo "</tbody></table></div></div>";
     echo "<table class='table table-bordered'>";
     echo "<thead><tr><th>".tra("Tasks by application")."</th></tr>";
     echo "<tr><th>".tra("Application")."</th><th>".tra("Unsent")."</th><th>".tra("In progress")."</th><th>".tra("Runtime of last 100 tasks in hours: average, min, max")."</th><th>".tra("Users in last 24 hours")."</th></tr></thead>";
