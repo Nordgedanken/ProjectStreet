@@ -68,7 +68,8 @@ function daemon_html($d) {
         $c = "disabled";
         break;
     }
-    echo "<tr class=row$row_parity>
+    echo "
+    <tr>
         <td>".command_display($d->cmd)."</td>
         <td>$d->host</td>
         <td class=\"$c\"><nobr>$s</nobr></td>
@@ -229,11 +230,18 @@ function show_status_html($x) {
         $i = 1-$i;
     }
     echo "</tr></table>\n";
-    echo "<br><tr>
-         <h2>".tra("Server status")."</h2>
-    ";
-    start_table();
-    table_header(tra("Program"), tra("Host"), tra("Status"));
+    echo "
+    <h2>".tra("Server status")."</h2>
+        <table class='table table-bordered table-striped'>
+            <thead>
+                <tr>
+                    <th>".tra("Program")."</th>
+                    <th>".tra("Host")."</th>
+                    <th>".tra("Status")."</th>
+                </tr>
+            </thead>
+            <tbody>
+        ";
     foreach ($daemons->local_daemons as $d) {
         daemon_html($d);
     }
@@ -243,7 +251,7 @@ function show_status_html($x) {
     foreach ($daemons->disabled_daemons as $d) {
         daemon_html($d);
     }
-    end_table();
+    echo "</tbody></table>"
     echo "<p align='right'>";
     echo "Task data as of ".time_str($j->cached_time)."<br>";
 
@@ -262,7 +270,8 @@ function show_status_html($x) {
     }
     echo "</p></tr>\n";
     end_table();
-    echo "<doofer tag den ich finden kann>";
+    
+    echo "</div>";
     page_tail();
 }
 
