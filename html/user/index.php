@@ -33,9 +33,8 @@ if (defined("CHARSET")) {
 page_head(PROJECT, null, null, "yes");
 
 echo <<<END
- <div id="maincontent">
-   <div id="mainrow">
-    <div id="leftcol">
+   <div class="row">
+    <div class="col-md-6">
 	  <div id="bigtext">
       <p>
       ProjectStreet@Car lets you volunteer your spare computer time (like when your screen saver is on) 
@@ -79,8 +78,7 @@ if ($stopped) {
 echo <<<END
        
       </div><!--CLOSE LEFT COLUMN-->
-	  <!--<td id="rightcol">-->
-	 <div id="rightcol">
+      <div id="col-md-6">
 END;
 
 if (!$stopped) {
@@ -116,7 +114,6 @@ echo <<<END
   <!--</table>-->
    <div class="clr"></div>
   </div>
- </div> <!--END MAINCONTENT-->
  
   
 END;
