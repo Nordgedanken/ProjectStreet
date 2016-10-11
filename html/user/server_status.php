@@ -105,8 +105,7 @@ function show_status_html($x) {
     page_head(tra("Project status"));
     $j = $x->jobs;
     $daemons = $x->daemons;
-    <table class="table table-bordered">
-    echo "<tr>\n";
+    echo "<table class="table table-bordered"><tr>\n";
     echo "<h2>".tra("Computing status")."</h2>\n";
     start_table();
     echo "<tr><td>\n";
