@@ -110,7 +110,7 @@ function show_status_html($x) {
     start_table();
     echo "<tr><td>\n";
     start_table();
-    table_header(tra("Work"), "#");
+    echo "<thead><tr>".tra("Work")."</tr></thead>";
     item_html("Tasks ready to send", $j->results_ready_to_send);
     item_html("Tasks in progress", $j->results_in_progress);
     item_html("Workunits waiting for validation", $j->wus_need_validate);
@@ -156,7 +156,7 @@ function show_status_html($x) {
         ";
         $i = 1-$i;
     }
-    echo "</tr>/table>\n";
+    echo "</tr></table>\n";
     echo "<br><tr>
          <h2>".tra("Server status")."</h2>
     ";
