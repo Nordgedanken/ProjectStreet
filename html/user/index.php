@@ -33,7 +33,7 @@ if (defined("CHARSET")) {
 page_head(PROJECT, null, null, "yes");
 
 echo <<<END
-   <div class="row" style="width: 70%; display: block; margin-left: auto; margin-right: auto;">
+   <div class="row" style="width: 60%; display: block; margin-left: auto; margin-right: auto;">
     <div class="col-md-6">
       <p class="bigtext">
       <h2>Infos</h2>
@@ -93,7 +93,6 @@ if (!$stopped) {
 
 echo "
     <h2>News</h2>
-      <p>
 ";
 include("motd.php");
 
