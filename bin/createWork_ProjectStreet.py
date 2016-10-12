@@ -15,6 +15,7 @@ args = parser.parse_args()
 cli = docker.Client(base_url='unix://var/run/docker.sock')
 RawData = os.path.join(boinc_project_path, '/rawData/')
 boinc2docker = os.path.join(boinc_project_path, '/bin/', 'boinc2docker_create_work.py')
+
 def analyse():
     if os.listdir(RawData):
         files = sorted(os.listdir(RawData), key=os.path.getctime)
@@ -24,9 +25,11 @@ def analyse():
         last_stage = args.last_stage
         if last_stage:
             if last_stage == "1":
+                print "stage 2"
                 addFiles([last_wu_results], last_wu_id)
                 os.system(boinc2docker + ' --rsc_fpops_est 90000e15 --delay_bound 1.21e+6 mtrnord/projectstreet_detection:' + last_wu_id + ' sh -c "echo "2" >> /root/shared/results/stage.txt && ./stage2_generateHaarDetector.sh 2>&1 | tee /root/shared/results/logs.txt"')
             if last_stage == "2":
+                print "stage 3"
                 addFiles([last_wu_results], last_wu_id)
                 addFiles(None, last_wu_id, os.path.join(RawData, oldest))
                 os.system(boinc2docker + ' --rsc_fpops_est 90000e15 --delay_bound 1.21e+6 mtrnord/projectstreet_detection:' + last_wu_id + ' sh -c "echo "3" >> /root/shared/results/stage.txt && ./stage3_analyseVideo.py 2>&1 | tee /root/shared/results/logs.txt"')
@@ -38,6 +41,7 @@ def analyse():
                                 raise
                 os.rename(os.path.join(RawData, oldest), os.path.join(RawData, "old/", oldest))
         else:
+            print "stage 1"
             os.system(boinc2docker + ' --rsc_fpops_est 90000e15 --delay_bound 1.21e+6 mtrnord/projectstreet_detection:latest sh -c "echo "1" >> /root/shared/results/stage.txt && ./stage1_getNeg.sh 2>&1 | tee /root/shared/results/logs.txt"')
                     
                     
