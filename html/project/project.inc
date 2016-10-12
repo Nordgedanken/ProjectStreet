@@ -169,9 +169,7 @@ function project_banner($title, $prefix) {
 		</div>
 	</a>
 	<br/>
-	<br/>
-	<br/>
-	<div class='container-fluid container_css'>
+	<div class='container container_css'>
    ";
 }
 
