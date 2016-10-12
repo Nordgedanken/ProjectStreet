@@ -113,24 +113,24 @@ class Assimilator():
         Note that the -noinsert flag (self.noinsert) must be accounted for when
         overriding this method.
         """
-        stage_ones = open('ip.log', 'r')
-        stage_one_list = stage_ones.readlines()
-        stage_ones.close()
-        stage_one_found = False
+        stage = open(os.path.join(results, 'stage.txt'), 'r')
+        stage_list = stage.readlines()
+        stage.close()
+        stage_found = False
         for line in stage_one_list:
-            if str(wu) in line:
+            if str("1") in line:
                 print('move to stage2')
-                stage_one_found = True
-
-        if not found:
-            stage_twos = open('ip.log', 'a')
-            stage_two_list = stage_twos.readlines()
-            stage_twos.close()
-            stage_two_found = False
-            for line in stage_one_list:
-                if str(wu) in line:
-                    print('move to stage3'),
-                    stage_two_found = True
+                os.system(os.path.join(boinc_project_path, "bin", "createWork_ProjectStreet.py")+  " --last_wu_results " + results + " --last_wu_id " + wu + " --last_stage 1")
+                stage_found = True
+            if str("2") in line:
+                print('move to stage3')
+                os.system(os.path.join(boinc_project_path, "bin", "createWork_ProjectStreet.py")+  " --last_wu_results " + results + " --last_wu_id " + wu + " --last_stage 2")
+                stage_found = True
+            if str("3") in line:
+                print('make results map ready')
+                #TODO!
+                stage_found = True
+                
         abstract()
         
     def report_errors(self, wu):
