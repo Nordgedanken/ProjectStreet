@@ -6,12 +6,9 @@ import docker
 import argparse
 
 parser = argparse.ArgumentParser()
-parser.add_argument('--last_wu_results', type=string,
-                    help='Path to the resultds of the last wu')
-parser.add_argument('--last_wu_id', type=string,
-                    help='last wu_ID')
-parser.add_argument('--last_stage', type=string,
-                    help='last wu_stage')
+parser.add_argument('--last_wu_results', help='Path to the resultds of the last wu')
+parser.add_argument('--last_wu_id', help='last wu_ID')
+parser.add_argument('--last_stage', help='last wu_stage')
 
 args = parser.parse_args()
 cli = docker.Client(base_url='unix://var/run/docker.sock')
