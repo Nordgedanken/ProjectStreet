@@ -33,7 +33,7 @@ if (defined("CHARSET")) {
 page_head(PROJECT, null, null, "yes");
 
 echo <<<END
-   <div class="row" style="width: 60%; display: block; margin-left: auto; margin-right: auto;">
+   <div class="row">
     <div class="col-md-6">
       <p class="bigtext">
       <h2>Infos</h2>
