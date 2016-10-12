@@ -25,11 +25,11 @@ def analyse():
         if last_stage:
             if last_stage == "1":
                 addFiles([last_wu_results], last_wu_id)
-                os.system(boinc2docker + '--rsc_fpops_est 90000e15 --delay_bound 1.21e+6 mtrnord/projectstreet_detection:' + last_wu_id + ' sh -c "echo "2" >> /root/shared/results/stage.txt && ./stage2_generateHaarDetector.sh 2>&1 | tee /root/shared/results/logs.txt"')
+                os.system(boinc2docker + ' --rsc_fpops_est 90000e15 --delay_bound 1.21e+6 mtrnord/projectstreet_detection:' + last_wu_id + ' sh -c "echo "2" >> /root/shared/results/stage.txt && ./stage2_generateHaarDetector.sh 2>&1 | tee /root/shared/results/logs.txt"')
             if last_stage == "2":
                 addFiles([last_wu_results], last_wu_id)
                 addFiles(None, last_wu_id, os.path.join(RawData, oldest))
-                os.system(boinc2docker + '--rsc_fpops_est 90000e15 --delay_bound 1.21e+6 mtrnord/projectstreet_detection:' + last_wu_id + ' sh -c "echo "3" >> /root/shared/results/stage.txt && ./stage3_analyseVideo.py 2>&1 | tee /root/shared/results/logs.txt"')
+                os.system(boinc2docker + ' --rsc_fpops_est 90000e15 --delay_bound 1.21e+6 mtrnord/projectstreet_detection:' + last_wu_id + ' sh -c "echo "3" >> /root/shared/results/stage.txt && ./stage3_analyseVideo.py 2>&1 | tee /root/shared/results/logs.txt"')
                 if not os.path.exists(os.path.dirname(os.path.join(RawData, 'old'))):
                     	try:
                             os.makedirs(os.path.dirname(os.path.join(RawData, 'old')))
@@ -38,7 +38,7 @@ def analyse():
                                 raise
                 os.rename(os.path.join(RawData, oldest), os.path.join(RawData, "old/", oldest))
         else:
-            os.system(boinc2docker + '--rsc_fpops_est 90000e15 --delay_bound 1.21e+6 mtrnord/projectstreet_detection:latest sh -c "echo "1" >> /root/shared/results/stage.txt && ./stage1_getNeg.sh 2>&1 | tee /root/shared/results/logs.txt"')
+            os.system(boinc2docker + ' --rsc_fpops_est 90000e15 --delay_bound 1.21e+6 mtrnord/projectstreet_detection:latest sh -c "echo "1" >> /root/shared/results/stage.txt && ./stage1_getNeg.sh 2>&1 | tee /root/shared/results/logs.txt"')
                     
                     
 def make_tree(dirs, files):
