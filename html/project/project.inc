@@ -18,6 +18,7 @@ define("FORUM_QA_MERGED_MODE", true);
 define("COPYRIGHT_HOLDER", "<a href=\"http://nordgedanken.de\">Marcel Radzio</a>");
 define("SYS_ADMIN_EMAIL", "info@nordgedanken.de");
 define("UOTD_ADMIN_EMAIL", "info@nordgedanken.de"); # who gets user of the day pool running low e-mails?
+define("USE_STOPFORUMSPAM", true);
 
 
 // Email addresses separated by pipe ( | ) that will receive user reported
