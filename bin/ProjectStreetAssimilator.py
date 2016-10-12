@@ -130,11 +130,11 @@ class Assimilator():
                 print('make results map ready')
                 #TODO!
                 if not os.path.exists(os.path.dirname(os.path.join(boinc_project_path, 'MapData'))):
-                try:
-                    os.makedirs(os.path.dirname(os.path.join(boinc_project_path, 'MapData')))
-                except OSError as exc: # Guard against race condition
-                    if exc.errno != errno.EEXIST:
-                        raise
+                    try:
+                        os.makedirs(os.path.dirname(os.path.join(boinc_project_path, 'MapData')))
+                    except OSError as exc: # Guard against race condition
+                        if exc.errno != errno.EEXIST:
+                            raise
                 os.rename(results, os.path.join(boinc_project_path, "MapData"))
                 
         abstract()
