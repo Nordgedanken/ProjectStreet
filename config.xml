@@ -95,7 +95,7 @@
     </tasks>
     <daemons>
         <daemon>
-            <cmd>script_assimilator --app boinc2docker --init_script ProjectStreetAssimilator</cmd>
+            <cmd>script_assimilator --app boinc2docker --init_script bin/ProjectStreetAssimilator.py</cmd>
             <pid_file>ProjectStreetAssimilator.pid</pid_file>
             <output>ProjectStreetAssimilator.log</output>
         </daemon>
