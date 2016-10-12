@@ -1,6 +1,7 @@
 #!/usr/bin/env python
 ##### Generates automticly work (Run as daemon as needed)
 import boinc_path_config
+from Boinc import boinc_project_path
 import os
 import docker
 import argparse
