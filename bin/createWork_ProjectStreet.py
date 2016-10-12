@@ -63,5 +63,5 @@ def addFiles(last_wu_results, last_wu_id, files):
         with docker.utils.tar(base) as tarFile:
             cli.put_archive(container, '/vol1', tarFile)
         cli.commit(container=container, tag=last_wu_id)    
-    else:
+    except:
         print "something wrent wrong"
