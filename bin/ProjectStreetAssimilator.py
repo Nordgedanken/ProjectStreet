@@ -129,7 +129,13 @@ class Assimilator():
             if str("3") in line:
                 print('make results map ready')
                 #TODO!
-                stage_found = True
+                if not os.path.exists(os.path.dirname(os.path.join(boinc_project_path, 'MapData'))):
+                try:
+                    os.makedirs(os.path.dirname(os.path.join(boinc_project_path, 'MapData')))
+                except OSError as exc: # Guard against race condition
+                    if exc.errno != errno.EEXIST:
+                        raise
+                os.rename(results, os.path.join(boinc_project_path, "MapData"))
                 
         abstract()
         
