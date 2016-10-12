@@ -168,6 +168,9 @@ function project_banner($title, $prefix) {
 			<div class='col-xs-5 line'><hr></div>
 		</div>
 	</a>
+	<br/>
+	<br/>
+	<br/>
 	<div class='container-fluid container_css'>
    ";
 }
