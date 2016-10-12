@@ -32,7 +32,8 @@ def boinc2docker_create_work(image,
                              progress_file=None,
                              vbox_job_xml=None,
                              create_work_args=None,
-                             force_reimport=False):
+                             force_reimport=False,
+                             stage="1"):
     """
     Arguments:
         image - name of Docker image
@@ -53,6 +54,7 @@ def boinc2docker_create_work(image,
                        [{'fraction_done_filename': 'progress'}, 'disable_automatic_checkpoints']
         create_work_args - any extra bin/create_work arguments to pass to the job, e.g. {'target_nresults':1}
         force_reimport - reimport the image into BOINC even if the image header file is there
+        stage - defines which stage of ProjectStreet@Car will be generated
     """
 
     fmt = partial(lambda s,f: s.format(**dict(globals(),**f.f_locals)),f=currentframe())
@@ -274,6 +276,7 @@ if __name__=='__main__':
     #other args
     parser.add_argument('--quiet', action="store_true", help="Don't print alot of messages.")
     parser.add_argument('--force_reimport', action="store_true", help="Force reimporting the image from Docker (might fix a corrupt previous import).")
+    parser.add_argument('--stage', action="store_true", help="defines which stage of ProjectStreet@Car will be generated")
 
 
     args = parser.parse_args()
@@ -286,5 +289,6 @@ if __name__=='__main__':
                                   memory=args.memory,
                                   create_work_args=read_create_work_args(args),
                                   verbose=(not args.quiet),
-                                  force_reimport=args.force_reimport)
+                                  force_reimport=args.force_reimport,
+                                  stage=args.stage)
     if wu is not None: print wu
