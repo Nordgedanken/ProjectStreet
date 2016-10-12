@@ -1,6 +1,6 @@
 #!/usr/bin/env python
 '''
-Generic Assimilator framework
+Based on the Generic Assimilator framework
 '''
 
 import os, re, signal, sys, time, hashlib
@@ -113,6 +113,24 @@ class Assimilator():
         Note that the -noinsert flag (self.noinsert) must be accounted for when
         overriding this method.
         """
+        stage_ones = open('ip.log', 'r')
+        stage_one_list = stage_ones.readlines()
+        stage_ones.close()
+        stage_one_found = False
+        for line in stage_one_list:
+            if str(wu) in line:
+                print('move to stage2')
+                stage_one_found = True
+
+        if not found:
+            stage_twos = open('ip.log', 'a')
+            stage_two_list = stage_twos.readlines()
+            stage_twos.close()
+            stage_two_found = False
+            for line in stage_one_list:
+                if str(wu) in line:
+                    print('move to stage3'),
+                    stage_two_found = True
         abstract()
         
     def report_errors(self, wu):
