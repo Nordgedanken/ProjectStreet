@@ -13,7 +13,7 @@ parser.add_argument('--last_stage', help='last wu_stage')
 
 args = parser.parse_args()
 cli = docker.Client(base_url='unix://var/run/docker.sock')
-RawData = os.path.join(boinc_project_path, 'rawData')
+RawData = os.path.join(boinc_project_path, '/rawData/')
 boinc2docker = os.path.join(boinc_project_path, 'bin', 'boinc2docker_create_work.py')
 def analyse():
     if os.listdir(RawData):
@@ -31,12 +31,12 @@ def analyse():
                 addFiles(None, last_wu_id, os.path.join(RawData, oldest))
                 os.system(boinc2docker + '--rsc_fpops_est 90000e15 --delay_bound 1.21e+6 mtrnord/projectstreet_detection:' + last_wu_id + ' sh -c "echo "3" >> /root/shared/results/stage.txt && ./stage3_analyseVideo.py 2>&1 | tee /root/shared/results/logs.txt"')
                 if not os.path.exists(os.path.dirname(os.path.join(RawData, 'old'))):
-                  try:
-                    os.makedirs(os.path.dirname(os.path.join(RawData, 'old')))
-                  except OSError as exc: # Guard against race condition
-                    if exc.errno != errno.EEXIST:
-                      raise
-                os.rename(os.path.join(RawData, oldest), os.path.join(RawData, "old", oldest))
+                    	try:
+                            os.makedirs(os.path.dirname(os.path.join(RawData, 'old')))
+                        except OSError as exc: # Guard against race condition
+                            if exc.errno != errno.EEXIST:
+                                raise
+                os.rename(os.path.join(RawData, oldest), os.path.join(RawData, "old/", oldest))
         else:
             os.system(boinc2docker + '--rsc_fpops_est 90000e15 --delay_bound 1.21e+6 mtrnord/projectstreet_detection:latest sh -c "echo "1" >> /root/shared/results/stage.txt && ./stage1_getNeg.sh 2>&1 | tee /root/shared/results/logs.txt"')
                     
