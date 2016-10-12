@@ -15,7 +15,7 @@ RUN echo "deb http://ftp.debian.org/debian jessie-backports main" >> /etc/apt/so
         git \
     && apt-get install -y python-certbot-apache -t jessie-backports
     
-RUN git clone https://github.com/facebook/zstd.git && cd zstd && make && make install
+RUN git clone https://github.com/facebook/zstd.git && cd zstd && git checkout master && make && make install
 
 RUN pip install zstandard docker-py
 
