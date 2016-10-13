@@ -15,6 +15,14 @@ parser.add_argument('--last_stage', help='last wu_stage')
 args = parser.parse_args()
 cli = docker.Client(base_url='unix://var/run/docker.sock')
 
+def oldest_file_in_tree(rootfolder, extension=".mp4"):
+    return min(
+        (os.path.join(dirname, filename)
+        for dirname, dirnames, filenames in os.walk(rootfolder)
+        for filename in filenames
+        if filename.endswith(extension)),
+        key=lambda fn: os.stat(fn).st_mtime)
+
 def make_tree(dirs, files):
     #### Function comes from: https://github.com/docker/docker-py/blob/master/tests/helpers.py#L10-L20
     base = tempfile.mkdtemp()
@@ -46,8 +54,7 @@ def analyse():
     boinc2docker = os.path.join(boinc_project_path.project_path('bin'), 'boinc2docker_create_work.py')
     print "boinc2docker: " + boinc2docker
     if os.listdir(RawData):
-        files = sorted(os.listdir(RawData), key=os.path.getctime)
-        oldest = os.path.join(boinc_project_path.project_path(), files[0])
+        oldest = oldest_file_in_tree(RawData, ".mp4")
         last_wu_results = args.last_wu_results
         last_wu_id = args.last_wu_id
         last_stage = args.last_stage
