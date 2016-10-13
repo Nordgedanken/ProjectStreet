@@ -16,7 +16,7 @@ args = parser.parse_args()
 cli = docker.Client(base_url='unix://var/run/docker.sock')
 RawData = os.path.join(boinc_project_path, '/rawData/')
 boinc2docker = os.path.join(boinc_project_path, '/bin/', 'boinc2docker_create_work.py')
-
+analyse()
 def analyse():
     if os.listdir(RawData):
         files = sorted(os.listdir(RawData), key=os.path.getctime)
