@@ -15,8 +15,8 @@ parser.add_argument('--last_stage', help='last wu_stage')
 args = parser.parse_args()
 cli = docker.Client(base_url='unix://var/run/docker.sock')
 print boinc_project_path
-RawData = os.path.join(boinc_project_path, '/rawData/')
-boinc2docker = os.path.join(boinc_project_path, '/bin/', 'boinc2docker_create_work.py')
+RawData = os.path.join(os.environ.get('BOINC_PROJECT_DIR'), '/rawData/')
+boinc2docker = os.path.join(boinc_project_path.project_path('bin') 'boinc2docker_create_work.py')
 
 def make_tree(dirs, files):
     #### Function comes from: https://github.com/docker/docker-py/blob/master/tests/helpers.py#L10-L20
