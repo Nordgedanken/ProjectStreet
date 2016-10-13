@@ -47,7 +47,7 @@ def analyse():
     print "boinc2docker: " + boinc2docker
     if os.listdir(RawData):
         files = sorted(os.listdir(RawData), key=os.path.getctime)
-        oldest = files[0]
+        oldest = os.path.join(boinc_project_path.project_path(), files[0])
         last_wu_results = args.last_wu_results
         last_wu_id = args.last_wu_id
         last_stage = args.last_stage
