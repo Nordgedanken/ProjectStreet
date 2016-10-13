@@ -16,7 +16,32 @@ args = parser.parse_args()
 cli = docker.Client(base_url='unix://var/run/docker.sock')
 RawData = os.path.join(boinc_project_path, '/rawData/')
 boinc2docker = os.path.join(boinc_project_path, '/bin/', 'boinc2docker_create_work.py')
-analyse()
+
+def make_tree(dirs, files):
+    #### Function comes from: https://github.com/docker/docker-py/blob/master/tests/helpers.py#L10-L20
+    base = tempfile.mkdtemp()
+
+    for path in dirs:
+        os.makedirs(os.path.join(base, path))
+
+    for path in files:
+        with open(os.path.join(base, path), 'w') as f:
+            f.write("content")
+
+    return base
+
+def addFiles(last_wu_results, last_wu_id, files):
+    try:
+        base = helpers.make_tree(last_wu_results, files)
+        container = cli.create_container(image='mtrnord/projectstreet_detection:latest', command='/bin/sleep 300', volumes=['/vol1'])
+        with docker.utils.tar(base) as tarFile:
+            cli.put_archive(container, '/vol1', tarFile)
+        cli.commit(container=container, tag=last_wu_id)    
+    except:
+        print "something wrent wrong"
+        
+        
+
 def analyse():
     if os.listdir(RawData):
         files = sorted(os.listdir(RawData), key=os.path.getctime)
@@ -50,27 +75,7 @@ def analyse():
             proc = subprocess.Popen([boinc2docker, '--rsc_fpops_est 90000e15 --delay_bound 1.21e+6 mtrnord/projectstreet_detection:latest sh -c "echo "1" >> /root/shared/results/stage.txt && ./stage1_getNeg.sh 2>&1 | tee /root/shared/results/logs.txt"'], stdout=subprocess.PIPE, shell=True)
             (out, err) = proc.communicate()
             print "program output:", out
-                    
-                    
-def make_tree(dirs, files):
-    #### Function comes from: https://github.com/docker/docker-py/blob/master/tests/helpers.py#L10-L20
-    base = tempfile.mkdtemp()
 
-    for path in dirs:
-        os.makedirs(os.path.join(base, path))
-
-    for path in files:
-        with open(os.path.join(base, path), 'w') as f:
-            f.write("content")
-
-    return base
-
-def addFiles(last_wu_results, last_wu_id, files):
-    try:
-        base = helpers.make_tree(last_wu_results, files)
-        container = cli.create_container(image='mtrnord/projectstreet_detection:latest', command='/bin/sleep 300', volumes=['/vol1'])
-        with docker.utils.tar(base) as tarFile:
-            cli.put_archive(container, '/vol1', tarFile)
-        cli.commit(container=container, tag=last_wu_id)    
-    except:
-        print "something wrent wrong"
+        
+        
+analyse()
