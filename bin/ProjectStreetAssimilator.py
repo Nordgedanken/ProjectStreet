@@ -120,22 +120,22 @@ class Assimilator():
         for line in stage_one_list:
             if str("1") in line:
                 print('move to stage2')
-                os.system(os.path.join(boinc_project_path, "bin/", "/createWork_ProjectStreet.py")+  " --last_wu_results " + results + " --last_wu_id " + wu + " --last_stage 1")
+                os.system(os.path.join(boinc_project_path.project_path("bin"), "/createWork_ProjectStreet.py")+  " --last_wu_results " + results + " --last_wu_id " + wu + " --last_stage 1")
                 stage_found = True
             if str("2") in line:
                 print('move to stage3')
-                os.system(os.path.join(boinc_project_path, "bin/", "createWork_ProjectStreet.py")+  " --last_wu_results " + results + " --last_wu_id " + wu + " --last_stage 2")
+                os.system(os.path.join(boinc_project_path.project_path("bin"), "createWork_ProjectStreet.py")+  " --last_wu_results " + results + " --last_wu_id " + wu + " --last_stage 2")
                 stage_found = True
             if str("3") in line:
                 print('make results map ready')
                 #TODO!
-                if not os.path.exists(os.path.dirname(os.path.join(boinc_project_path, 'MapData'))):
+                if not os.path.exists(os.path.dirname(os.path.join(os.environ.get('BOINC_PROJECT_DIR'), 'MapData'))):
                     try:
-                        os.makedirs(os.path.dirname(os.path.join(boinc_project_path, 'MapData')))
+                        os.makedirs(os.path.dirname(os.path.join(os.environ.get('BOINC_PROJECT_DIR'), 'MapData')))
                     except OSError as exc: # Guard against race condition
                         if exc.errno != errno.EEXIST:
                             raise
-                os.rename(results, os.path.join(boinc_project_path, "MapData"))
+                os.rename(results, os.path.join(os.environ.get('BOINC_PROJECT_DIR'), "MapData"))
                 
         abstract()
         
