@@ -41,8 +41,10 @@ def addFiles(last_wu_results, last_wu_id, files):
         
 
 def analyse():
-    RawData = os.path.join(os.environ.get('BOINC_PROJECT_DIR'), '/rawData/')
+    RawData = os.path.join(boinc_project_path.project_path(), 'rawData')
+    print "Raw Data: " + RawData
     boinc2docker = os.path.join(boinc_project_path.project_path('bin'), 'boinc2docker_create_work.py')
+    print "boinc2docker: " + boinc2docker
     if os.listdir(RawData):
         files = sorted(os.listdir(RawData), key=os.path.getctime)
         oldest = files[0]
