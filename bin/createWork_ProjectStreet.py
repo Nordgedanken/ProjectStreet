@@ -81,7 +81,7 @@ def analyse():
                 os.rename(os.path.join(RawData, oldest), os.path.join(RawData, "old/", oldest))
         else:
             print "stage 1"
-            proc = subprocess.Popen([boinc2docker, '--rsc_fpops_est', '90000e15', '--delay_bound', '1.21e+6', 'mtrnord/projectstreet_detection:latest', sh -c "echo "1" >> /root/shared/results/stage.txt && ./stage1_getNeg.sh 2>&1 | tee /root/shared/results/logs.txt"'], stdout=subprocess.PIPE, shell=True)
+            proc = subprocess.Popen([boinc2docker, '--rsc_fpops_est', '90000e15', '--delay_bound', '1.21e+6', 'mtrnord/projectstreet_detection:latest', 'sh -c "echo "1" >> /root/shared/results/stage.txt && ./stage1_getNeg.sh 2>&1 | tee /root/shared/results/logs.txt"'], stdout=subprocess.PIPE, shell=True)
             (out, err) = proc.communicate()
             print "program output:", out
     else:
