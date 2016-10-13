@@ -53,6 +53,7 @@ def analyse():
     print "Raw Data: " + RawData
     boinc2docker = os.path.join(boinc_project_path.project_path('bin'), 'boinc2docker_create_work.py')
     print "boinc2docker: " + boinc2docker
+    cli.pull(repository='mtrnord/projectstreet_detection', tag='latest')
     if os.listdir(RawData):
         oldest = oldest_file_in_tree(RawData, ".mp4")
         last_wu_results = args.last_wu_results
