@@ -95,9 +95,24 @@
     </tasks>
     <daemons>
         <daemon>
-            <cmd>script_assimilator --app boinc2docker --script ProjectStreetAssimilator.py</cmd>
-            <pid_file>ProjectStreetAssimilator.pid</pid_file>
-            <output>ProjectStreetAssimilator.log</output>
+            <cmd>script_assimilator --app stage1_1-boinc2docker --script ProjectStreetAssimilator.py</cmd>
+            <pid_file>stage1_1-ProjectStreetAssimilator.pid</pid_file>
+            <output>stage1_1-ProjectStreetAssimilator.log</output>
+        </daemon>
+        <daemon>
+            <cmd>script_assimilator --app stage1_2-boinc2docker --script ProjectStreetAssimilator.py</cmd>
+            <pid_file>stage1_2-ProjectStreetAssimilator.pid</pid_file>
+            <output>stage1_2-ProjectStreetAssimilator.log</output>
+        </daemon>
+        <daemon>
+            <cmd>script_assimilator --app stage1_3-boinc2docker --script ProjectStreetAssimilator.py</cmd>
+            <pid_file>stage1_3-ProjectStreetAssimilator.pid</pid_file>
+            <output>stage1_3-ProjectStreetAssimilator.log</output>
+        </daemon>
+        <daemon>
+            <cmd>script_assimilator --app stage1_4-boinc2docker --script ProjectStreetAssimilator.py</cmd>
+            <pid_file>stage1_4-ProjectStreetAssimilator.pid</pid_file>
+            <output>stage1_4-ProjectStreetAssimilator.log</output>
         </daemon>
         <daemon>
             <cmd>feeder -d 3</cmd>
@@ -109,9 +124,24 @@
             <cmd>file_deleter -d 3 </cmd>
         </daemon>
         <daemon>
-            <cmd>sample_substr_validator --app boinc2docker -d 4 --stderr_string "logs.txt" --stderr_string "neg.tar in upload" --stderr_string "data.tar in upload" --stderr_string "bg.txt in upload" --stderr_string "positives.vec in upload"</cmd>
-            <pid_file>boinc2docker_validator.pid</pid_file>
-            <output>boinc2docker_validator.log</output>
+            <cmd>sample_substr_validator --app stage1_1-boinc2docker -d 4 --stderr_string "neg_dict in upload" --stderr_string "neg.zst in upload"</cmd>
+            <pid_file>stage1_1-boinc2docker_validator.pid</pid_file>
+            <output>stage1_1-boinc2docker_validator.log</output>
+        </daemon>
+        <daemon>
+            <cmd>sample_substr_validator --app stage1_2-boinc2docker -d 4 --stderr_string "neg_dict in upload" --stderr_string "neg.zst in upload"</cmd>
+            <pid_file>stage1_2-boinc2docker_validator.pid</pid_file>
+            <output>stage1_2-boinc2docker_validator.log</output>
+        </daemon>
+        <daemon>
+            <cmd>sample_substr_validator --app stage1_3-boinc2docker -d 4 --stderr_string "pos_dict in upload" --stderr_string "pos.zst in upload" --stderr_string "bg.txt in upload" --stderr_string "neg_dict in upload" --stderr_string "pos.zst in upload"</cmd>
+            <pid_file>stage1_3-boinc2docker_validator.pid</pid_file>
+            <output>stage1_3-boinc2docker_validator.log</output>
+        </daemon>
+        <daemon>
+            <cmd>sample_substr_validator --app stage1_4-boinc2docker -d 4 --stderr_string "bg.txt in upload" --stderr_string "positives.vec in upload"</cmd>
+            <pid_file>stage1_4-boinc2docker_validator.pid</pid_file>
+            <output>stage1_4-boinc2docker_validator.log</output>
         </daemon>
     </daemons>
 </boinc>
