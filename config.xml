@@ -115,6 +115,16 @@
             <output>stage1_4-ProjectStreetAssimilator.log</output>
         </daemon>
         <daemon>
+            <cmd>script_assimilator --app stage2-boinc2docker --script ProjectStreetAssimilator.py</cmd>
+            <pid_file>stage2-ProjectStreetAssimilator.pid</pid_file>
+            <output>stage2-ProjectStreetAssimilator.log</output>
+        </daemon>
+        <daemon>
+            <cmd>script_assimilator --app stage3-boinc2docker --script ProjectStreetAssimilator.py</cmd>
+            <pid_file>stage3-ProjectStreetAssimilator.pid</pid_file>
+            <output>stage3-ProjectStreetAssimilator.log</output>
+        </daemon>
+        <daemon>
             <cmd>feeder -d 3</cmd>
         </daemon>
         <daemon>
