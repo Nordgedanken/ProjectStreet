@@ -120,14 +120,18 @@ class Assimilator():
         for line in stage_one_list:
             if str("1_1") in line:
                 print('move to stage1_2')
+                os.system("zstd --decompress " + os.path.join(results, "/neg.zst") + "-D " + os.path.join(results, "/neg_dict"))
                 os.system(os.path.join(boinc_project_path.project_path("bin"), "/createWork_ProjectStreet.py")+  " --last_wu_results " + results + " --last_wu_id " + wu + " --last_stage 1_1")
                 stage_found = True
             if str("1_2") in line:
                 print('move to stage1_3')
+                os.system("zstd --decompress " + os.path.join(results, "/neg.zst") + "-D " + os.path.join(results, "/neg_dict"))
                 os.system(os.path.join(boinc_project_path.project_path("bin"), "/createWork_ProjectStreet.py")+  " --last_wu_results " + results + " --last_wu_id " + wu + " --last_stage 1_2")
                 stage_found = True
             if str("1_3") in line:
                 print('move to stage1_4')
+                os.system("zstd --decompress " + os.path.join(results, "/neg.zst") + "-D " + os.path.join(results, "/neg_dict"))
+                os.system("zstd --decompress " + os.path.join(results, "/pos.zst") + "-D " + os.path.join(results, "/pos_dict"))
                 os.system(os.path.join(boinc_project_path.project_path("bin"), "/createWork_ProjectStreet.py")+  " --last_wu_results " + results + " --last_wu_id " + wu + " --last_stage 1_3")
                 stage_found = True
             if str("1_4") in line:
