@@ -118,9 +118,21 @@ class Assimilator():
         stage.close()
         stage_found = False
         for line in stage_one_list:
-            if str("1") in line:
+            if str("1_1") in line:
+                print('move to stage1_2')
+                os.system(os.path.join(boinc_project_path.project_path("bin"), "/createWork_ProjectStreet.py")+  " --last_wu_results " + results + " --last_wu_id " + wu + " --last_stage 1_1")
+                stage_found = True
+            if str("1_2") in line:
+                print('move to stage1_3')
+                os.system(os.path.join(boinc_project_path.project_path("bin"), "/createWork_ProjectStreet.py")+  " --last_wu_results " + results + " --last_wu_id " + wu + " --last_stage 1_2")
+                stage_found = True
+            if str("1_3") in line:
+                print('move to stage1_4')
+                os.system(os.path.join(boinc_project_path.project_path("bin"), "/createWork_ProjectStreet.py")+  " --last_wu_results " + results + " --last_wu_id " + wu + " --last_stage 1_3")
+                stage_found = True
+            if str("1_4") in line:
                 print('move to stage2')
-                os.system(os.path.join(boinc_project_path.project_path("bin"), "/createWork_ProjectStreet.py")+  " --last_wu_results " + results + " --last_wu_id " + wu + " --last_stage 1")
+                os.system(os.path.join(boinc_project_path.project_path("bin"), "/createWork_ProjectStreet.py")+  " --last_wu_results " + results + " --last_wu_id " + wu + " --last_stage 1_4")
                 stage_found = True
             if str("2") in line:
                 print('move to stage3')
