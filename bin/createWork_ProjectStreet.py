@@ -63,32 +63,32 @@ def analyse():
             if last_stage == "1_1":
                 print "stage 1_2"
                 addFiles([last_wu_results], last_wu_id)
-                proc = subprocess.Popen(boinc2docker + ' --appname stage1_2-boinc2docker --rsc_fpops_est 90000e15 --delay_bound 1.21e+6 mtrnord/projectstreet_detection:' + last_wu_id + ' sh -c "echo "1_2" >> /root/shared/results/stage.txt && ./stage1_2.sh 2>&1 | tee /root/shared/results/logs.txt"', stdout=subprocess.PIPE, shell=True)
+                proc = subprocess.Popen(boinc2docker + ' --appname stage1_2-boinc2docker --rsc_fpops_est 90000e20 --delay_bound 1.21e+6 mtrnord/projectstreet_detection:' + last_wu_id + ' sh -c "echo "1_2" >> /root/shared/results/stage.txt && ./stage1_2.sh 2>&1 | tee /root/shared/results/logs.txt"', stdout=subprocess.PIPE, shell=True)
                 (out, err) = proc.communicate()
                 print "program output:", out
             if last_stage == "1_2":
                 print "stage 1_3"
                 addFiles([last_wu_results], last_wu_id)
-                proc = subprocess.Popen(boinc2docker + ' --appname stage1_3-boinc2docker --rsc_fpops_est 90000e15 --delay_bound 1.21e+6 mtrnord/projectstreet_detection:' + last_wu_id + ' sh -c "echo "1_3" >> /root/shared/results/stage.txt && ./stage1_3.sh 2>&1 | tee /root/shared/results/logs.txt"', stdout=subprocess.PIPE, shell=True)
+                proc = subprocess.Popen(boinc2docker + ' --appname stage1_3-boinc2docker --rsc_fpops_est 90000e20 --delay_bound 1.21e+6 mtrnord/projectstreet_detection:' + last_wu_id + ' sh -c "echo "1_3" >> /root/shared/results/stage.txt && ./stage1_3.sh 2>&1 | tee /root/shared/results/logs.txt"', stdout=subprocess.PIPE, shell=True)
                 (out, err) = proc.communicate()
                 print "program output:", out
             if last_stage == "1_3":
                 print "stage 1_4"
                 addFiles([last_wu_results], last_wu_id)
-                proc = subprocess.Popen(boinc2docker + ' --appname stage1_4-boinc2docker --rsc_fpops_est 90000e15 --delay_bound 1.21e+6 mtrnord/projectstreet_detection:' + last_wu_id + ' sh -c "echo "1_4" >> /root/shared/results/stage.txt && ./stage1_4.sh 2>&1 | tee /root/shared/results/logs.txt"', stdout=subprocess.PIPE, shell=True)
+                proc = subprocess.Popen(boinc2docker + ' --appname stage1_4-boinc2docker --rsc_fpops_est 90000e20 --delay_bound 1.21e+6 mtrnord/projectstreet_detection:' + last_wu_id + ' sh -c "echo "1_4" >> /root/shared/results/stage.txt && ./stage1_4.sh 2>&1 | tee /root/shared/results/logs.txt"', stdout=subprocess.PIPE, shell=True)
                 (out, err) = proc.communicate()
                 print "program output:", out
             if last_stage == "1_4":
                 print "stage 2"
                 addFiles([last_wu_results], last_wu_id)
-                proc = subprocess.Popen(boinc2docker + ' --rsc_fpops_est 90000e15 --delay_bound 1.21e+6 mtrnord/projectstreet_detection:' + last_wu_id + ' sh -c "echo "2" >> /root/shared/results/stage.txt && ./stage2_generateHaarDetector.sh 2>&1 | tee /root/shared/results/logs.txt"', stdout=subprocess.PIPE, shell=True)
+                proc = subprocess.Popen(boinc2docker + ' --appname stage2-boinc2docker --rsc_fpops_est 90000e20 --delay_bound 1.21e+6 mtrnord/projectstreet_detection:' + last_wu_id + ' sh -c "echo "2" >> /root/shared/results/stage.txt && ./stage2_generateHaarDetector.sh 2>&1 | tee /root/shared/results/logs.txt"', stdout=subprocess.PIPE, shell=True)
                 (out, err) = proc.communicate()
                 print "program output:", out
             if last_stage == "2":
                 print "stage 3"
                 addFiles([last_wu_results], last_wu_id)
                 addFiles(None, last_wu_id, os.path.join(RawData, oldest))
-                proc = subprocess.Popen(boinc2docker + ' --rsc_fpops_est 90000e15 --delay_bound 1.21e+6 mtrnord/projectstreet_detection:' + last_wu_id +' sh -c "echo "3" >> /root/shared/results/stage.txt && ./stage3_analyseVideo.py 2>&1 | tee /root/shared/results/logs.txt"', stdout=subprocess.PIPE, shell=True)
+                proc = subprocess.Popen(boinc2docker + ' --appname stage3-boinc2docker --rsc_fpops_est 90000e20 --delay_bound 1.21e+6 mtrnord/projectstreet_detection:' + last_wu_id +' sh -c "echo "3" >> /root/shared/results/stage.txt && ./stage3_analyseVideo.py 2>&1 | tee /root/shared/results/logs.txt"', stdout=subprocess.PIPE, shell=True)
                 (out, err) = proc.communicate()
                 print "program output:", out
                 if not os.path.exists(os.path.dirname(os.path.join(RawData, 'old'))):
@@ -100,7 +100,7 @@ def analyse():
                 os.rename(os.path.join(RawData, oldest), os.path.join(RawData, "old/", oldest))
         else:
             print "stage 1_1"
-            proc = subprocess.Popen(boinc2docker + ' --appname stage1_1-boinc2docker --rsc_fpops_est 90000e15 --delay_bound 1.21e+6 mtrnord/projectstreet_detection:latest sh -c "echo "1_1" >> /root/shared/results/stage.txt && ./stage1_1.sh 2>&1 | tee /root/shared/results/logs.txt"', stdout=subprocess.PIPE, shell=True)
+            proc = subprocess.Popen(boinc2docker + ' --appname stage1_1-boinc2docker --rsc_fpops_est 90000e20 --delay_bound 1.21e+6 mtrnord/projectstreet_detection:latest sh -c "echo "1_1" >> /root/shared/results/stage.txt && ./stage1_1.sh 2>&1 | tee /root/shared/results/logs.txt"', stdout=subprocess.PIPE, shell=True)
             (out, err) = proc.communicate()
             print "program output:", out
     else:
